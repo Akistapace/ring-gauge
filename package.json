@@ -38,7 +38,6 @@
   },
   "description": "This is a vanilla web app built with [Parcel](https://parceljs.org).",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Akistapace/ring-gauge.git"
