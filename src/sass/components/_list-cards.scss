@@ -1,0 +1,15 @@
+.list-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 40px 0;
+    gap: 25px;
+    @media (max-width: 768px) {
+        padding: 0 10px;
+    }
+    @media (max-width: 400px) {
+        justify-content: center;
+    }
+}

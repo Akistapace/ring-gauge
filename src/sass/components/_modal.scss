@@ -1,0 +1,47 @@
+.modal {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000050;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+    .content {
+        background-color: #fff;
+        max-width: 1200px;
+        padding: 30px 20px 20px 20px;
+        border-radius: 5px;
+        position: relative;
+    }
+    .content > .close {
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        cursor: pointer;
+        user-select: none;
+        font-weight: 700;
+    }
+    .content > .link {
+        display: block;
+        color: $primary;
+        font-size: 14px;
+    }
+    &.--opened {
+        display: flex;    
+    }
+    &.--show-ring {
+        text-align: center;
+        .content {
+            max-width: 500px;
+            min-height: 200px;
+        }
+        .circle {
+            margin-top: 60px;
+            margin-bottom: 60px;
+        }
+    }
+}

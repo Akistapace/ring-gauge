@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>MAO | Régua</title>
+    <meta name="description" content="O medidor de anel é uma ferramenta online e gratuita, prontinha para você usar. Seu principal objetivo é lhe ajudar a descobrir o tamanho de seu anel" />
+    <meta name="viewport"    content="width=device-width, initial-scale=1"/>
+    <meta name="keywords"    content="medir anel, medidor de anel, aliança, anel, alianças, anéis, casamento, namoro" />
+    <meta name="author"      content="Fernando Aquistapace" />
+
+    <link rel="stylesheet" href="../sass/index.scss" />
+  </head>
+  <body class="regua">
+    <include src="./src/html/header.html" ></include>
+    <main>
+      <h1 class="title --center">Medir o Diâmetro</h1>
+
+      <section class="container">
+        <p class="paragraph --center" style="margin-bottom: 25px">
+          Para medir o diâmetro do seu anel é necessário seguir o seguinte passo-a-passo: 
+        </p>
+        <p class="paragraph --center">
+            <ul>
+                <legend> <b>Passo a passo:</b></legend>
+                <li>
+                  1) Previamente tenha um anel em mãos 
+                </li>
+                <li>
+                  2) Pegue uma régua 
+                </li>
+                <li>
+                  3) Coloque a régua na diagonal, posicionando a régua no centro do anel de acordo com a imagem abaixo 
+                </li>
+                <!-- <li>
+                  4) centimetros entre as bordas centrais será o centímetro de seu anel 
+                </li> -->
+            </ul>
+        </p>
+        <p class="paragraph --center">
+            Seguindo o passo a passo acima você tera os centímetros correspondente ao seu anel, agora basta você identificar o a sua numeração na tabela abaixo.
+        </p>
+        <div>
+            <div class="wrapper">
+              <img width='100px' height='100px' src='/src/assets/ruler.png' alt="ds" rel="noreferrer" />
+            </div>
+            <div class="wrapper">
+              <table></table>
+            </div>
+        </div>
+      </section>
+      <section class="container">
+        <include src="./src/html/footer-text.html"></include>
+      </section>
+    </main>
+    <include src="./src/html/footer.html"></include>
+    
+    <script type="module" src="../js/app.js"></script>
+  </body>
+</html>

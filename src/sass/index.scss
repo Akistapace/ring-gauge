@@ -1,0 +1,39 @@
+@import
+'./base/theme',
+'./base/global'
+;
+
+
+@import 
+'./helpers/typos',
+'./helpers/commons'
+;
+
+// ====================================================== //
+// ===================== COMPONENTES ==================== //
+// ====================================================== //
+@import 
+'./components/header',
+'./components/search-bar',
+'./components/card',
+'./components/methods',
+'./components/modal',
+'./components/footer-text',
+'./components/footer',
+'./components/file-download'
+;
+
+// ====================================================== //
+// ======================== PAGES ======================= //
+// ====================================================== //
+@import 
+'./pages/home',
+'./pages/contact',
+'./pages/regua',
+'./pages/tabela',
+'./pages/medidor',
+
+'./pages/barbante',
+
+'./pages/default'
+;

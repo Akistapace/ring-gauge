@@ -1,0 +1,254 @@
+[
+    {   
+        "id": 0,
+        "size": 0,
+        "mm": 12.7,
+        "cm": 0,
+        "circunference": 0
+    },
+    {  
+        "id": 1,
+        "size": 1,
+        "mm": 13.0,
+        "cm": 0,
+        "circunference": 0
+    },
+    {   
+        "id": 2,
+        "size": 2,
+        "mm": 13.3,
+        "cm": 0,
+        "circunference": 0
+    },
+    {  
+        "id": 3,
+        "size": 4,
+        "mm": 13.6,
+        "cm": 0,
+        "circunference": 0
+    },
+    {  
+        "id": 4,
+        "size": 4,
+        "mm": 14,
+        "cm": 0,
+        "circunference": 0
+    },
+    {   
+        "id": 5,
+        "size": 5,
+        "mm": 14.3,
+        "cm": 0,
+        "circunference": 0
+    },
+    {   
+        "id": 6,
+        "size": 6,
+        "mm": 14.6,
+        "cm": 0,
+        "circunference": 0
+    },
+    {   
+        "id": 7,
+        "size": 7,
+        "mm": 14.9,
+        "cm": 0,
+        "circunference": 0
+    },
+    {   
+        "id": 8,
+        "size": 8,
+        "mm": 15.2,
+        "cm": 0,
+        "circunference": 0
+    },
+    {   
+        "id": 9,
+        "size": 9,
+        "mm": 15.6,
+        "cm": 0,
+        "circunference": 0
+    },
+    {
+        "id": 10,
+        "size": 10,
+        "mm": 15.9,
+        "cm": 0,
+        "circunference": 0
+    },
+    {
+        "id": 11,
+        "size": 11,
+        "mm": 16.2,
+        "cm": 0,
+        "circunference": 0
+    },
+    {
+        "id": 12,
+        "size": 12,
+        "mm": 16.5,
+        "cm": 0,
+        "circunference": 0
+    },
+    {
+        "id": 13,
+        "size": 13,
+        "mm": 16.8,
+        "cm": 0,
+        "circunference": 0
+    },
+    {
+        "id": 14,
+        "size": 14,
+        "mm": 17.1,
+        "cm": 0,
+        "circunference": 0
+    },
+    {
+        "id": 15,
+        "size": 15,
+        "mm": 17.5,
+        "cm": 0,
+        "circunference": 0
+    },
+    {
+        "id": 16,
+        "size": 16,
+        "mm": 17.8,
+        "cm": 0,
+        "circunference": 0
+    },
+    {
+        "id": 17,
+        "size": 17,
+        "mm": 18.1,
+        "cm": 0,
+        "circunference": 0
+    },
+    {
+        "id": 18,
+        "size": 18,
+        "mm": 18.4,
+        "cm": 0,
+        "circunference": 0
+    },
+    {
+        "id": 19,
+        "size": 19,
+        "mm": 18.7,
+        "cm": 0,
+        "circunference": 0
+    },
+    {
+        "id": 20,
+        "size": 20,
+        "mm": 19.1,
+        "cm": 0,
+        "circunference": 0
+    },
+    {
+        "id": 21,
+        "size": 21,
+        "mm": 19.4,
+        "cm": 0,
+        "circunference": 0
+    },
+    {
+        "id": 22,
+        "size": 22,
+        "mm": 19.7,
+        "cm": 0,
+        "circunference": 0
+    },
+    {
+        "id": 23,
+        "size": 23,
+        "mm": 20.0,
+        "cm": 0,
+        "circunference": 0
+    },
+    {
+        "id": 24,
+        "size": 24,
+        "mm": 20.3,
+        "cm": 0,
+        "circunference": 0
+    },
+    {
+        "id": 25,
+        "size": 25,
+        "mm": 20.6,
+        "cm": 0,
+        "circunference": 0
+    },
+    {
+        "id": 26,
+        "size": 26,
+        "mm": 21.0,
+        "cm": 0,
+        "circunference": 0
+    },
+    {
+        "id": 27,
+        "size": 27,
+        "mm": 21.3,
+        "cm": 0,
+        "circunference": 0
+    },
+    {
+        "id": 28,
+        "size": 28,
+        "mm": 21.6,
+        "cm": 0,
+        "circunference": 0
+    },
+    {
+        "id": 29,
+        "size": 29,
+        "mm": 21.9,
+        "cm": 0,
+        "circunference": 0
+    },
+    {
+        "id": 30,
+        "size": 30,
+        "mm": 22.2,
+        "cm": 0,
+        "circunference": 0
+    },
+    {
+        "id": 31,
+        "size": 31,
+        "mm": 22.6,
+        "cm": 0,
+        "circunference": 0
+    },
+    {
+        "id": 32,
+        "size": 32,
+        "mm": 22.9,
+        "cm": 0,
+        "circunference": 0
+    },
+    {
+        "id": 33,
+        "size": 33,
+        "mm": 23.2,
+        "cm": 0,
+        "circunference": 0
+    },
+    {
+        "id": 34,
+        "size": 34,
+        "mm": 23.5,
+        "cm": 0,
+        "circunference": 0
+    },
+    {
+        "id": 35,
+        "size": 35,
+        "mm": 23.8,
+        "cm": 0,
+        "circunference": 0
+    }
+]

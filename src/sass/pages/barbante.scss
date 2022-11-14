@@ -1,0 +1,16 @@
+.barbante {
+    a {
+        text-decoration: underline;
+        color: $primary;
+    }
+    img {
+        max-width: 500px;
+        width: 100%;
+        height: auto;
+        margin: auto;
+        display: block;
+    }
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,27 @@
+.--center {
+    text-align: center;
+}
+.--left {
+    text-align: left;
+}
+.--right {
+    text-align: right;
+}
+.paragraph {
+    font-size: 15px;
+    line-height: 1.7;
+}
+.title {
+    font-size: 34px;
+    margin-bottom: 20px;
+    @media (max-width: 768px) {
+        font-size: 28px;
+    }
+}
+.subtitle {
+    font-size: 24px;
+    margin-bottom: 20px;
+    @media (max-width: 768px) {
+        font-size: 16px;
+    }
+}

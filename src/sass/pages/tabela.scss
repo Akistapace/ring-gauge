@@ -1,0 +1,13 @@
+.tabela main {
+    text-align: center;
+    a:not([download]) {
+        font-weight: 700;
+        text-decoration: underline;
+        color: $primary;
+    }
+    img {
+        width: 100%;
+        height: auto;
+        max-width: 500px;
+    }
+}

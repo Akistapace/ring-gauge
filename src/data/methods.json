@@ -1,0 +1,34 @@
+[
+    {
+        "id": 0,
+        "name": "Barbante",
+        "image": "/barbante.png",
+        "width": "155px",
+        "height": "160px",
+        "link": "/metodos/barbante"
+    },
+    {
+        "id": 1,
+        "name": "Diâmetro",
+        "image": "/circunferencia.png",
+        "width": "150px",
+        "height": "150px",
+        "link": "/metodos/regua"
+    },
+    {
+        "id": 2,
+        "name": "Tabela de Aros",
+        "image": "/tabela.png",
+        "width": "152px",
+        "height": "150px",
+        "link": "/metodos/tabela"
+    },
+    {
+        "id": 3,
+        "name": "Medidor Online",
+        "image": "/medidoronline.png",
+        "width": "143px",
+        "height": "158px",
+        "link": "/metodos/medidor-online"
+    }
+]

@@ -1,0 +1,15 @@
+.contact {
+    .form {
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        margin: auto auto 60px auto;
+        .input {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        textarea {
+            min-height: 200px;
+        }
+    }
+}

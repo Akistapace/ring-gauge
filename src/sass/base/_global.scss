@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body,
+#__next {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul {
+    list-style: none;
+}
+main {
+    color: $text;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 60px;
+    padding-bottom: 60px; 
+    flex: 1 0 auto;
+    margin-top: 70px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: $tertiary;
+}
+ul,
+li, ol, dl, dd, dt, 
+p, blockquote, pre, table, th, td, thead, tbody, tfoot, tr,
+img, figure, figcaption, hr,
+p {
+    color: $text
+}
+b, strong {
+    color: $tertiary;
+}
+img {
+    margin: auto;
+}
+legend {
+    font-size: 24px;
+}
+table {
+    text-align: center;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 20px auto;
+    border-radius: 5px;
+    overflow: hidden;       
+    th {
+        color:  $white ;
+        background-color: $tertiary;
+        padding: 10px;
+        position: relative;
+        &:before {
+            content: "";
+            display: block;
+            height: calc(100% - 10px);
+            width: 1px;
+            background-color: $background;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+        /* @media (max-width: 400px) {
+            width: fit-content;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 50px;
+        } */
+    }
+    td {
+        color: $primary;
+        padding: 7px;
+    }
+    tr:nth-child(even) td {
+        background-color: $quaternary !important;
+        color: $white !important;
+    }
+
+    &.small {
+        font-size: 12px;
+        th {
+            padding: 5px 10px;
+        }
+        td {
+            padding: 7px;
+        }
+    }
+}
+button,
+textarea,
+input {
+    outline: none;
+}
+a, button {
+    cursor: pointer;
+}
+img {
+    height: auto;
+    width: 100%;
+}

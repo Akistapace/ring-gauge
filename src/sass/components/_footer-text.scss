@@ -1,0 +1,14 @@
+.footer-text {
+    margin-top: 15px;
+    text-align: center;
+    p {
+        @extend .paragraph;
+    }
+    h1 {
+        @extend .title;
+    }
+    h2 {
+        @extend .subtitle;
+        margin-top: 20px;
+    }
+}

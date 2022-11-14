@@ -1,12 +1,52 @@
 {
   "name": "parcel-app",
   "private": true,
-  "source": "src/index.html",
+  "source": [
+    "src/pages/index.html",
+    "src/pages/sobre.html",
+    "src/pages/contato.html",
+    "src/pages/politica-privacidade.html",
+    "src/pages/barbante.html",
+    "src/pages/medidor-online.html",
+    "src/pages/regua.html",
+    "src/pages/tabela-tamanhos.html",
+    "src/pages/tabela.html"
+  ],
+  "alias": {
+    "global": "@"
+  },
+  "staticFiles": {
+    "staticPath": [
+      "./src/assets/"
+    ]
+  },
   "scripts": {
     "start": "parcel",
     "build": "parcel build"
   },
   "devDependencies": {
-    "parcel": "^2.0.0"
-  }
+    "@parcel/transformer-posthtml": "^2.7.0",
+    "@parcel/transformer-sass": "^2.7.0",
+    "@parcel/transformer-vue": "^2.7.0",
+    "parcel": "^2.7.0",
+    "parcel-plugin-static-files-copy": "^2.6.0",
+    "parcel-reporter-static-files-copy": "^1.4.0",
+    "posthtml": "^0.16.6",
+    "posthtml-include": "^1.7.4",
+    "posthtml-markdownit": "^1.3.0",
+    "posthtml-shorten": "^1.0.0"
+  },
+  "description": "This is a vanilla web app built with [Parcel](https://parceljs.org).",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akistapace/ring-gauge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Akistapace/ring-gauge/issues"
+  },
+  "homepage": "https://github.com/Akistapace/ring-gauge#readme"
 }
