@@ -46,18 +46,16 @@
         transition: transform 0.3s linear;
         height: 170px;
         width: 100%;
-        max-width: 200px;
+        max-width: 170px;
         padding: 20px;
         border-radius: 50%;
-        background-image:  $gradient1;
-        
+        background-image:  $gradient1;        
     }
     .item h3 {
-        font-size: 38px;
         position: relative;
         color: $white;
         font-weight: 700;
-        font-size: 28px;
+        font-size: 24px;
         @media (max-width: 768px) {
             font-size: 20px;
         }

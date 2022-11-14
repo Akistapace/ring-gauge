@@ -9,3 +9,12 @@
     padding: 0 5%;
     margin: auto;
 }
+
+.--bg {
+    background-color: $primary;
+    padding: 30px 0 50px 0;
+    margin: 20px 0;
+    * {
+        color: #fff !important;
+    }
+}

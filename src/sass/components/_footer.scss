@@ -22,8 +22,13 @@
     .list {
         height: 100%;
     }
-
-
+    .logo img {
+        width: 100%;
+        height: auto;
+        max-width: 150px;
+        filter: invert(1);
+        margin-bottom: 30px;
+    }
     .item {
         margin: 0 0 10px 0; 
         display: flex;

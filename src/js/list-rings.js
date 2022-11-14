@@ -15,6 +15,7 @@ const listRings = {
     template(ring) {
         const template = /*html*/`
             <div class="card" data-card>
+                <div class="ringsize">${ring.size}</div>
                 <span class="circle" style="width: ${ring.mm}mm;height: ${ring.mm}mm"></span>
                 <Table class="small">
                 <thead>

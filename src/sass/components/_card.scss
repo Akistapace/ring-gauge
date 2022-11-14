@@ -12,12 +12,32 @@
     max-width: 250px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    position: relative;
+    .ringsize {
+        height: 30px;
+        width: 30px;
+        background: $gradient1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
     &:hover {
         transform: scale(1.1);
         box-shadow: 5px 5px 10px #cecdcd;
     }
     @media (max-width: 768px) {
         max-width: fit-content;
+    }
+    table {
+        tbody {
+            font-size: 18px;
+        }
     }
 }
 
@@ -49,4 +69,5 @@
         left: 0;
         transform: translateY(-50%);
     }
+    
 }

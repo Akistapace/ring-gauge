@@ -29,10 +29,11 @@ export const header = {
             }
         }, {passive: true});
     },
-    openMenuMobile() {
+    handleMenuMobile() {
       let button = document.querySelector('[data-menu-mobile]')
       let menu = document.querySelector('[data-menu]')
       let fade = document.querySelector('[data-fade]')
+      let close = document.querySelector('[data-close]')
       
       button.addEventListener('click', ()=> {
         // button.classList.toggle("--opened");
@@ -44,9 +45,21 @@ export const header = {
         menu.classList.remove("--opened-menu")
         fade.classList.remove("--opened-menu")
       })
+      close.addEventListener('click', ()=> {
+        // button.classList.toggle("--opened");
+        menu.classList.remove("--opened-menu")
+        fade.classList.remove("--opened-menu")
+      })
+      window.addEventListener('keyup', (e)=> {
+        e.stopPropagation();
+        if( menu.classList.contains('--opened-menu') && e.key === "Escape") {
+            menu.classList.remove("--opened-menu")
+            fade.classList.remove("--opened-menu")
+        }
+      })
     },
     init() {
-        this.openMenuMobile();
+        this.handleMenuMobile();
         this.showOnScroll();
     }
 }

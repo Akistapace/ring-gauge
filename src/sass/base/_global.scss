@@ -106,3 +106,16 @@ img {
     height: auto;
     width: 100%;
 }
+
+::selection {
+    background-color: $quaternary;
+    // color: #fff;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background: $primary;
+    border-radius: 10px;
+}
