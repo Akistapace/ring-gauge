@@ -48,6 +48,7 @@
     margin: 0 auto 20px auto;
     background-color: $primary50;
     position: relative;
+    display: block;
     &:after {
         content: "";
         display: block;

@@ -18,19 +18,21 @@ const listRings = {
                 <div class="ringsize">${ring.size}</div>
                 <span class="circle" style="width: ${ring.mm}mm;height: ${ring.mm}mm"></span>
                 <Table class="small">
-                <thead>
-                    <tr>
-                    <th>Tamanho</th>
-                    <th>Milímetros</th>
-                    </tr>
-                </thead>
+                    <thead>
+                        <tr>
+                        <th>Tamanho</th>
+                        <th>Milímetros</th>
+                        ${ring.circunference ? `<th>Circ.</th>` : ''}
+                        </tr>
+                    </thead>
 
-                <tbody>
-                    <tr>
-                    <td>${ring.size}</td>
-                    <td>${ring.mm}</td>
-                    </tr>
-                </tbody>
+                    <tbody>
+                        <tr>
+                        <td>${ring.size}</td>
+                        <td>${ring.mm}</td>
+                        ${ring.circunference ? `<td>${ring.circunference}</td>`:''}
+                        </tr>
+                    </tbody>
                 </Table>
             </div>
         `;
