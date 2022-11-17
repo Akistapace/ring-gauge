@@ -14,6 +14,7 @@ export const modal = {
                 setRing.style.height = getRing.style.height
 
                 modal.classList.add('--opened')
+                document.body.classList.add('--no-scroll')
            }); 
         });
     },
@@ -22,12 +23,14 @@ export const modal = {
         let buttonClose = modal.querySelector('.close')
         buttonClose.addEventListener('click', ()=> {
             modal.classList.remove('--opened')
+            document.body.classList.remove('--no-scroll')
         })
 
         modal.addEventListener('click', (e)=> {
             e.stopPropagation();
             if (e.target.classList.contains('modal')) {
                 modal.classList.remove('--opened')
+                document.body.classList.remove('--no-scroll')
             }
         })
 
@@ -35,6 +38,7 @@ export const modal = {
             e.stopPropagation();
             if( modal.classList.contains('--opened') && e.key === "Escape") {
                 modal.classList.remove('--opened')
+                document.body.classList.remove('--no-scroll')
             }
         })
     },
