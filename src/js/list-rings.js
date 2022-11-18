@@ -48,7 +48,7 @@ const listRings = {
             const index = ring.parentElement.getAttribute('data-card')
             const size = rings[index]?.mm * mmToPx;
          
-            console.log('size',rings[index], rings[index]?.mm);
+            // console.log('size',rings[index], rings[index]?.mm);
             const scale = window.devicePixelRatio; // Change to 1 on retina screens to see blurry ring.
             ring.style.width = size * scale+'px';
             ring.style.height = size * scale+'px';
