@@ -10,13 +10,15 @@ const listRings = {
                container += this.template(ring);
             });    
             list.insertAdjacentHTML('afterbegin', container)
+            
+            this.setCircle(rings)
         }
     }, 
     template(ring) {
         const template = /*html*/`
-            <div class="card" data-card>
+            <div class="card" data-card="${ring.id}">
                 <div class="ringsize">${ring.size}</div>
-                <span class="circle" style="width: ${ring.mm}mm;height: ${ring.mm}mm"></span>
+                <span class="circle"></span>
                 <Table class="small">
                     <thead>
                         <tr>
@@ -39,8 +41,21 @@ const listRings = {
 
         return template
     },
-   init() {
-       this.mount()
+    setCircle(rings) {
+        let mmToPx = 3.779527559055
+        const ring = document.querySelectorAll('.circle');
+        ring.forEach(ring => {
+            const index = ring.parentElement.getAttribute('data-card')
+            const size = rings[index]?.mm * mmToPx;
+         
+            console.log('size',rings[index], rings[index]?.mm);
+            const scale = window.devicePixelRatio; // Change to 1 on retina screens to see blurry ring.
+            ring.style.width = size * scale+'px';
+            ring.style.height = size * scale+'px';
+        });
+    },
+    init() {
+        this.mount()
     }
 }
 
