@@ -46,12 +46,15 @@ const listRings = {
         const ring = document.querySelectorAll('.circle');
         ring.forEach(ring => {
             const index = ring.parentElement.getAttribute('data-card')
-            const size = rings[index]?.mm * mmToPx;
+            const size = rings[index]?.mm;
          
             // console.log('size',rings[index], rings[index]?.mm);
             const scale = window.devicePixelRatio; // Change to 1 on retina screens to see blurry ring.
-            ring.style.width = size * scale+'px';
-            ring.style.height = size * scale+'px';
+            // ring.style.width = size * scale+'px';
+            // ring.style.height = size * scale+'px';
+            console.log('scale',scale);
+            ring.style.width = size+'mm';
+            ring.style.height = size+'mm';
         });
     },
     init() {
