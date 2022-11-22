@@ -20,8 +20,8 @@ const listRings = {
     template(ring) {
         const template = /*html*/`
             <div class="card" data-card="${ring.id}">
-                <div class="ringsize">${ring.size}</div>
-                <!--<span class="circle"></span>-->
+                <!--<div class="ringsize">${ring.size}</div>-->
+                <span class="circle"></span>
                 <canvas class="circle-canva"></canvas>
                 <Table class="small">
                     <thead>
@@ -49,22 +49,28 @@ const listRings = {
         let mmToPx = 3.7795275591
 
         // let rings=this.rings
-        const ring = document.querySelectorAll('.circle-canva');
+        // window.onload = ()=> {
+        //     alert('scale'+this.pixelRatio)
+        //     setTimeout(() => {
+        //     }, 3000);
+        // }
+
+        const ring = document.querySelectorAll('.circle');
         ring.forEach((ring, index) => {
             const size = toPX(rings[index]?.mm+'mm')
-            const canvas = ring
-            const ctx = canvas.getContext('2d');
+            // const canvas = ring
+            // const ctx = canvas.getContext('2d');
             const scale = this.pixelRatio; // Change to 1 on retina screens to see blurry canvas.
-            alert('scale',scale)
-            canvas.style.width = `${size * scale}px`;
-            canvas.style.height = `${size * scale}px`;
+            
+            ring.style.width = `${size * scale}px`;
+            ring.style.height = `${size * scale}px`;
             // canvas.width = size * scale;
             // canvas.height = size * scale;
             
-            ctx.scale(scale, scale);
+            // ctx.scale(scale, scale);
             
-            ctx.fillStyle = "#bada55";
-            ctx.fillRect(0, 0, 300, 300);
+            // ctx.fillStyle = "#bada55";
+            // ctx.fillRect(0, 0, 300, 300);
         });
     },
     updatePixelRatio() {
