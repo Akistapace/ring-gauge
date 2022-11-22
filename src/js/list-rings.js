@@ -47,12 +47,24 @@ const listRings = {
         ring.forEach(ring => {
             const index = ring.parentElement.getAttribute('data-card')
             const size = rings[index]?.mm * mmToPx;
+            
          
             // console.log('size',rings[index], rings[index]?.mm);
             const scale = window.devicePixelRatio; // Change to 1 on retina screens to see blurry ring.
-            ring.style.width = Math.floor(size * scale)+'px';
-            ring.style.height = Math.floor(size * scale)+'px';
+            // ring.style.width = Math.floor(size * scale)+'px';
+            // ring.style.height = Math.floor(size * scale)+'px';
+
+            ring.style.width  = this.conversion(size)+'rem';
+            ring.style.height = this.conversion(size)+'rem';
         });
+    },
+    conversion(pixel) {
+        if(pixel) {
+            let rem = 0.0625 * pixel;
+            // let em = 0.0625 * pixel;
+            console.log('REM',rem);
+            return rem;
+        }
     },
     init() {
         this.mount()
