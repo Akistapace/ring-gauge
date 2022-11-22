@@ -44,41 +44,23 @@ const listRings = {
         return template
     },
     setCircle(rings) {
-        let mmToPx = 3.779527559055
+        let mmToPx = 3.7795275591
 
         // let rings=this.rings
         const ring = document.querySelectorAll('.circle-canva');
         ring.forEach((ring, index) => {
-            // const index = ring.parentElement.getAttribute('data-card')
-            // // const size = rings[index]?.mm * mmToPx;
             const size = rings[index]?.mm * mmToPx
-            
-         
-            // // console.log('size',rings[index], rings[index]?.mm);
-            // const scale = window.devicePixelRatio; // Change to 1 on retina screens to see blurry ring.
-            // // ring.style.width = Math.floor(size * scale)+'px';
-            // // ring.style.height = Math.floor(size * scale)+'px';
-
-            // ring.style.width  = this.conversion(size) * scale +'cm';
-            // ring.style.height = this.conversion(size) * scale +'cm';
-        
-        
             const canvas = ring
             const ctx = canvas.getContext('2d');
-
-            // Set display size (css pixels).
-            // const size = 200;
             const scale = this.pixelRatio; // Change to 1 on retina screens to see blurry canvas.
-            canvas.style.width = `${size* scale}px`;
-            canvas.style.height = `${size* scale}px`;
-
-            // Set actual size in memory (scaled to account for extra pixel density).
+            
+            canvas.style.width = `${Math.floor(size * scale)}px`;
+            canvas.style.height = `${Math.floor(size * scale)}px`;
             canvas.width = Math.floor(size * scale);
             canvas.height = Math.floor(size * scale);
-
-            // Normalize coordinate system to use CSS pixels.
+            
             ctx.scale(scale, scale);
-
+            
             ctx.fillStyle = "#bada55";
             ctx.fillRect(0, 0, 300, 300);
         });
@@ -88,7 +70,17 @@ const listRings = {
         let prString = (pr * 100).toFixed(0);
         console.log(`${prString}% (${pr.toFixed(2)})`)
         this.pixelRatio = pr
-        matchMedia(`(resolution: ${pr}dppx)`).addEventListener("change", this.updatePixelRatio, { once: true })
+        matchMedia(`(resolution: ${pr}dppx)`)
+        .addEventListener("change", 
+            this.updatePixelRatio
+        , { once: true })
+    },
+    updateSize() {
+        let rings = this.rings
+        const ring = document.querySelectorAll('.circle-canva');
+        ring.forEach((ring, index) => {
+
+        })
     },
     conversion(pixel) {
         if(pixel) {
