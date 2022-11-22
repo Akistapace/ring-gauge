@@ -1,4 +1,6 @@
 import { fetchRings } from "./utils";
+import toPX from "./to-px"; 
+
 const listRings = {
     rings: fetchRings(), 
     pixelRatio: window.devicePixelRatio,
@@ -49,7 +51,7 @@ const listRings = {
         // let rings=this.rings
         const ring = document.querySelectorAll('.circle-canva');
         ring.forEach((ring, index) => {
-            const size = rings[index]?.mm * mmToPx
+            const size = toPX(rings[index]?.mm+'mm')
             const canvas = ring
             const ctx = canvas.getContext('2d');
             const scale = this.pixelRatio; // Change to 1 on retina screens to see blurry canvas.
@@ -79,7 +81,7 @@ const listRings = {
         let rings = this.rings
         const ring = document.querySelectorAll('.circle-canva');
         ring.forEach((ring, index) => {
-
+            
         })
     },
     conversion(pixel) {
