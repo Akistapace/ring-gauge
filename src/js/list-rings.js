@@ -68,11 +68,11 @@ const listRings = {
 
             // Set display size (css pixels).
             // const size = 200;
-            canvas.style.width = `${size}px`;
-            canvas.style.height = `${size}px`;
+            const scale = this.pixelRatio; // Change to 1 on retina screens to see blurry canvas.
+            canvas.style.width = `${size* scale}px`;
+            canvas.style.height = `${size* scale}px`;
 
             // Set actual size in memory (scaled to account for extra pixel density).
-            const scale = this.pixelRatio; // Change to 1 on retina screens to see blurry canvas.
             canvas.width = Math.floor(size * scale);
             canvas.height = Math.floor(size * scale);
 
