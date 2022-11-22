@@ -20,9 +20,8 @@ const listRings = {
     template(ring) {
         const template = /*html*/`
             <div class="card" data-card="${ring.id}">
-                <!--<div class="ringsize">${ring.size}</div>-->
+                <div class="ringsize">${ring.size}</div>
                 <span class="circle"></span>
-                <canvas class="circle-canva"></canvas>
                 <Table class="small">
                     <thead>
                         <tr>
@@ -46,31 +45,12 @@ const listRings = {
         return template
     },
     setCircle(rings) {
-        let mmToPx = 3.7795275591
-
-        // let rings=this.rings
-        // window.onload = ()=> {
-        //     alert('scale'+this.pixelRatio)
-        //     setTimeout(() => {
-        //     }, 3000);
-        // }
-
         const ring = document.querySelectorAll('.circle');
         ring.forEach((ring, index) => {
-            const size = toPX(rings[index]?.mm+'mm')
-            // const canvas = ring
-            // const ctx = canvas.getContext('2d');
-            const scale = this.pixelRatio; // Change to 1 on retina screens to see blurry canvas.
-            
-            ring.style.width = `${size * scale}px`;
-            ring.style.height = `${size * scale}px`;
-            // canvas.width = size * scale;
-            // canvas.height = size * scale;
-            
-            // ctx.scale(scale, scale);
-            
-            // ctx.fillStyle = "#bada55";
-            // ctx.fillRect(0, 0, 300, 300);
+            const size = rings[index]?.mm*3.78
+            const scale = this.pixelRatio; 
+            ring.style.width = `${Math.floor(size * scale)}px`;
+            ring.style.height = `${Math.floor(size * scale)}px`;           
         });
     },
     updatePixelRatio() {
@@ -79,9 +59,7 @@ const listRings = {
         console.log(`${prString}% (${pr.toFixed(2)})`)
         this.pixelRatio = pr
         matchMedia(`(resolution: ${pr}dppx)`)
-        .addEventListener("change", 
-            this.updatePixelRatio
-        , { once: true })
+        .addEventListener("change",this.setCircle, { once: true })
     },
     updateSize() {
         let rings = this.rings
@@ -90,13 +68,10 @@ const listRings = {
             
         })
     },
-    conversion(pixel) {
-        if(pixel) {
-            // let rem = 0.0625 * pixel;
-            let em = 0.0625 * pixel;
-            // console.log('REM',em);
-            return em;
-        }
+    conversion(pixel){
+        let rem = 0.0625 * pixel;
+        let em = 0.0625 * pixel;
+        return rem;
     },
     init() {
         this.mount()
