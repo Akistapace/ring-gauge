@@ -54,16 +54,16 @@ const listRings = {
             // ring.style.width = Math.floor(size * scale)+'px';
             // ring.style.height = Math.floor(size * scale)+'px';
 
-            ring.style.width  = this.conversion(size)+'rem';
-            ring.style.height = this.conversion(size)+'rem';
+            ring.style.width  = this.conversion(size)/ scale +'em';
+            ring.style.height = this.conversion(size)/ scale +'em';
         });
     },
     conversion(pixel) {
         if(pixel) {
-            let rem = 0.0625 * pixel;
-            // let em = 0.0625 * pixel;
-            console.log('REM',rem);
-            return rem;
+            // let rem = 0.0625 * pixel;
+            let em = 0.0625 * pixel;
+            console.log('REM',em);
+            return em;
         }
     },
     init() {
