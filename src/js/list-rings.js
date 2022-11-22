@@ -55,11 +55,11 @@ const listRings = {
             const canvas = ring
             const ctx = canvas.getContext('2d');
             const scale = this.pixelRatio; // Change to 1 on retina screens to see blurry canvas.
-            
-            canvas.style.width = `${Math.floor(size * scale)}px`;
-            canvas.style.height = `${Math.floor(size * scale)}px`;
-            canvas.width = Math.floor(size * scale);
-            canvas.height = Math.floor(size * scale);
+            alert('scale',scale)
+            canvas.style.width = `${size * scale}px`;
+            canvas.style.height = `${size * scale}px`;
+            // canvas.width = size * scale;
+            // canvas.height = size * scale;
             
             ctx.scale(scale, scale);
             
