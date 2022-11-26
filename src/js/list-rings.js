@@ -46,11 +46,17 @@ const listRings = {
     },
     setCircle(rings) {
         const ring = document.querySelectorAll('.circle');
+        alert('PIXEL RATIO '+this.pixelRatio)
         ring.forEach((ring, index) => {
-            const size = rings[index]?.mm*3.78
+            let size = rings[index]?.mm*3.78
             const scale = this.pixelRatio; 
-            ring.style.width = `${Math.floor(size * scale)}px`;
-            ring.style.height = `${Math.floor(size * scale)}px`;           
+
+            if (scale == 2) {
+                ring.style.transform = 'scale(0.8)';
+            }
+
+            ring.style.width = `${size * scale}px`;
+            ring.style.height = `${size * scale}px`;           
         });
     },
     updatePixelRatio() {
