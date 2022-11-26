@@ -44,4 +44,37 @@
             margin-bottom: 60px;
         }
     }
+    &.--show-sizes {
+        text-align: center;
+        .content {
+            max-width: 500px;
+            min-height: 200px;
+        }
+        .circle {
+            margin-top: 60px;
+            margin-bottom: 60px;
+        }
+        .ringsize {
+            top: 20px;
+            left: 20px;
+        }
+        .wrapper {
+            min-height: 100px;
+            margin-bottom: 25px;
+            margin-top: 25px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .circle {
+            margin: 0;
+        }
+        [data-table] {
+            thead th,
+            tbody td {
+                font-size: 14px;
+                font-weight: 700;
+            }
+        }
+    }
 }

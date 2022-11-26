@@ -1,13 +1,16 @@
 import listRings from "./list-rings";
 import {modal} from "./modals";
 import {header} from "./header";
+import { resizer } from "./resizer";
+
 // import {camera} from "./camera";
 
 (async ()=> {
-    listRings.init();
+    // listRings.init();
     header.init()
+    resizer.init()
     // camera.init()
     window.addEventListener('DOMContentLoaded', ()=>{
-        modal.init();
+        // modal.init();
     })
 })()

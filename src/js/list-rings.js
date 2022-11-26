@@ -46,7 +46,7 @@ const listRings = {
     },
     setCircle(rings) {
         const ring = document.querySelectorAll('.circle');
-        alert('PIXEL RATIO '+this.pixelRatio)
+        // alert('PIXEL RATIO '+this.pixelRatio)
         ring.forEach((ring, index) => {
             let size = rings[index]?.mm*3.78
             const scale = this.pixelRatio; 

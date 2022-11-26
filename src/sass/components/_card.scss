@@ -13,20 +13,7 @@
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     position: relative;
-    .ringsize {
-        height: 30px;
-        width: 30px;
-        background: $gradient1;
-        position: absolute;
-        top: 0;
-        left: 0;
-        border-radius: 50%;
-        color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
+  
     &:hover {
         transform: scale(1.1);
         box-shadow: 5px 5px 10px #cecdcd;
@@ -40,13 +27,24 @@
         }
     }
 }
-.circle-canva {
+.ringsize {
+    height: 30px;
+    width: 30px;
+    background: $gradient1;
+    position: absolute;
+    top: 0;
+    left: 0;
     border-radius: 50%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 .circle {
     display: block;
     border-radius: 50%;
-    outline: 3px outset $gold;
+    outline: 2px outset $gold;
     margin: 0 auto 20px auto;
     background-color: $primary50;
     position: relative;

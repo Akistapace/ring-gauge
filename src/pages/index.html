@@ -12,14 +12,7 @@
   <body class="home">
     <include src="./src/html/header.html" ></include>
     
-    <!-- <section id="demos" class="invisible">
-
-      <div id="liveView" class="camView">
-        <button id="webcamButton">Enable Webcam</button>
-        <video id="webcam" autoplay muted width="640" height="480"></video>
-      </div>
-      
-    </section> -->
+    <include src="./src/html/modal-sizer.html" ></include>
     <main>
       <section class="container">
         <h1 class="title --center">Medidor de Anel Online</h1>
@@ -39,10 +32,12 @@
           Lembre-se, as medidas de alianças são em milímetros, seja detalhista pois qualquer diferença na medida pode resultar em um tamanho errado, portanto seja bem cuidadoso.
         </p>
         <include src="./src/html/search-bar.html"></include>
+
+        <button data-open-resizer class="button">MEDIR</button>
       </section>
-      <section class="container">
+      <!-- <section class="container">
         <ul class="list-cards" id="list-rings"></ul>      
-      </section>
+      </section> -->
       <section class="--center --bg">
         <include src="./src/html/footer-text.html"></include>
       </section>
