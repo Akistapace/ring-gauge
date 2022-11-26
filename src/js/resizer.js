@@ -9,8 +9,8 @@ const runner = (index)=> {
     let tableCirc = document.querySelector('[data-modal-sizer] [data-circ]');
 
     ringSize.textContent = value.size;
-    circle.style.width   = Math.floor(value.mm * 3.77 * window.devicePixelRatio) + 'px';
-    circle.style.height  = Math.floor(value.mm * 3.77 * window.devicePixelRatio) + 'px';
+    circle.style.width   = Math.floor(value.mm * 3.77 ) + 'px';
+    circle.style.height  = Math.floor(value.mm * 3.77 ) + 'px';
     
     tableSize.textContent = value.size;
     tableMm.textContent = value.mm;
