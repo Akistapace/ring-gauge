@@ -7,7 +7,7 @@ const remCalc = (px, base = 16) => {
       tempPx = tempPx.replace('px', '')
   
     tempPx = parseInt(tempPx)
-    return (1 / base) * tempPx + 'rem'
+    return (1 / base) * tempPx + 'em'
 }
 
 const runner = (index)=> {  
@@ -18,13 +18,13 @@ const runner = (index)=> {
     let tableMm = document.querySelector('[data-modal-sizer] [data-mm]');
     let tableCirc = document.querySelector('[data-modal-sizer] [data-circ]');
 
-    let size = (value.mm * 3.779528 / 16).toFixed(2)
+    let size = remCalc((value.mm * 3.779528).toFixed(2), 16)
     // console.log('VAL', value.size.toFixed(2));
     // console.log('VAL', val);
     // console.log('VAL', (0.264583 * val).toFixed(2));
-
-    circle.style.width   = size + 'rem';
-    circle.style.height  = size + 'rem';
+console.log('SIZE', size);
+    circle.style.width   = size ;
+    circle.style.height  = size ;
     
     ringSize.textContent = value.size;
     tableSize.textContent = value.size;
