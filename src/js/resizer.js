@@ -1,17 +1,32 @@
 import rings from "../data/rings.json";
+import toPx from "./to-px";
 
-const runner = (index)=> {    
+const remCalc = (px, base = 16) => {
+    let tempPx = px
+    if (typeof px === 'string' || px instanceof String)
+      tempPx = tempPx.replace('px', '')
+  
+    tempPx = parseInt(tempPx)
+    return (1 / base) * tempPx + 'rem'
+}
+
+const runner = (index)=> {  
     let value = rings[index];
-    let circle = document.querySelector('[data-modal-sizer] .circle');
+    let circle = document.querySelector('[data-modal-sizer] #image');
     let ringSize = document.querySelector('[data-modal-sizer] .ringsize');
     let tableSize = document.querySelector('[data-modal-sizer] [data-size]');
     let tableMm = document.querySelector('[data-modal-sizer] [data-mm]');
     let tableCirc = document.querySelector('[data-modal-sizer] [data-circ]');
 
-    ringSize.textContent = value.size;
-    circle.style.width   = Math.floor(value.mm * 3.77 ) + 'px';
-    circle.style.height  = Math.floor(value.mm * 3.77 ) + 'px';
+    let size = (value.mm * 3.779528 / 16).toFixed(2)
+    // console.log('VAL', value.size.toFixed(2));
+    // console.log('VAL', val);
+    // console.log('VAL', (0.264583 * val).toFixed(2));
+
+    circle.style.width   = size + 'rem';
+    circle.style.height  = size + 'rem';
     
+    ringSize.textContent = value.size;
     tableSize.textContent = value.size;
     tableMm.textContent = value.mm;
     tableCirc.textContent = value.circunference;
@@ -19,12 +34,13 @@ const runner = (index)=> {
 
 export const resizer = {
     sliderBar: ()=> document.querySelector(`[data-resizer] .slider`),
-    setMin: 0,
+    setMin: rings[0].size,
     setMax: rings.length - 1,
-    startValue: 28,
+    startValue: 14,
     setDefaultValue() { runner(this.startValue) },
     rangebar() {
         const _this = this
+        // console.log(rings[0]);
         const slider = _this.sliderBar()
         slider.oninput = function() {
             slider.max = _this.setMax;
@@ -71,6 +87,19 @@ export const resizer = {
     init() {
         const _this = this
         if (this.modalContainer()) {
+            let canvas = document.createElement('canvas')
+            const size = Math.floor(rings[this.startValue].mm * 3.77) /16 + 'rem';
+            const ctx = canvas.getContext('2d');
+            canvas.style.width = size;
+            canvas.style.height = size;
+            ctx.fillStyle = "#bada55";
+            ctx.fillRect(0, 0, 300, 300);
+            const imageElement  = document.querySelector("#image");
+            imageElement.width  = rings[this.startValue].mm * 3.77
+            imageElement.height = rings[this.startValue].mm * 3.77
+            
+            imageElement.src = canvas.toDataURL("image/png");
+
             _this.setDefaultValue();
             _this.rangebar();
             _this.close();

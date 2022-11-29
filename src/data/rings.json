@@ -79,170 +79,174 @@
         "circunference": 49,
         "EUA": 0
     },
+
+
+
+
     {
         "id": 10,
         "size": 10,
-        "mm": 15.92,
-        "cm": 0,
+        "mm": 14.80,
+        "cm": 1.5,
         "circunference": 50,
         "EUA": 0
     },
     {
         "id": 11,
         "size": 11,
-        "mm": 16.23,
-        "cm": 0,
+        "mm": 15.20,
+        "cm": 1.51,
         "circunference": 50,
         "EUA": 0
     },
     {
         "id": 12,
         "size": 12,
-        "mm": 16.55,
-        "cm": 0,
+        "mm": 15.50,
+        "cm": 1.51,
         "circunference": 52,
         "EUA": 0
     },
     {
         "id": 13,
         "size": 13,
-        "mm": 16.87,
-        "cm": 0,
+        "mm": 15.80,
+        "cm": 1.6,
         "circunference": 53,
         "EUA": 0
     },
     {
         "id": 14,
         "size": 14,
-        "mm": 17.19,
-        "cm": 0,
+        "mm": 16.20,
+        "cm": 1.61,
         "circunference": 54,
         "EUA": 0
     },
     {
         "id": 15,
         "size": 15,
-        "mm": 17.51,
-        "cm": 0,
+        "mm": 16.50,
+        "cm": 1.7,
         "circunference": 55,
         "EUA": 0
     },
     {
         "id": 16,
         "size": 16,
-        "mm": 17.83,
-        "cm": 0,
+        "mm": 16.80,
+        "cm": 1.71,
         "circunference": 56,
         "EUA": 0
     },
     {
         "id": 17,
         "size": 17,
-        "mm": 18.14,
-        "cm": 0,
+        "mm": 17.20,
+        "cm": 1.72,
         "circunference": 57,
         "EUA": 0
     },
     {
         "id": 18,
         "size": 18,
-        "mm": 18.46,
-        "cm": 0,
+        "mm": 17.50,
+        "cm": 1.75,
         "circunference": 58,
         "EUA": 0
     },
     {
         "id": 19,
         "size": 19,
-        "mm": 18.76,
-        "cm": 0,
+        "mm": 17.80,
+        "cm": 1.8,
         "circunference": 59,
         "EUA": 0
     },
     {
         "id": 20,
         "size": 20,
-        "mm": 19.10,
-        "cm": 0,
+        "mm": 18.20,
+        "cm": 1.85,
         "circunference": 60,
         "EUA": 0
     },
     {
         "id": 21,
         "size": 21,
-        "mm": 19.42,
-        "cm": 0,
+        "mm": 18.50,
+        "cm": 1.88,
         "circunference": 61,
         "EUA": 0
     },
     {
         "id": 22,
         "size": 22,
-        "mm": 19.74,
-        "cm": 0,
+        "mm": 18.80,
+        "cm": 1.9,
         "circunference": 62,
         "EUA": 0
     },
     {
         "id": 23,
         "size": 23,
-        "mm": 20.05,
-        "cm": 0,
+        "mm": 19.20,
+        "cm": 1.92,
         "circunference": 63,
         "EUA": 0
     },
     {
         "id": 24,
         "size": 24,
-        "mm": 20.37,
-        "cm": 0,
+        "mm": 19.50,
+        "cm": 1.99,
         "circunference": 64,
         "EUA": 0
     },
     {
         "id": 25,
         "size": 25,
-        "mm": 20.69,
-        "cm": 0,
+        "mm": 19.80,
+        "cm": 2,
         "circunference": 65,
         "EUA": 0
     },
     {
         "id": 26,
         "size": 26,
-        "mm": 21.01,
-        "cm": 0,
+        "mm": 20.20,
+        "cm": 2.05,
         "circunference": 66,
         "EUA": 0
     },
     {
         "id": 27,
         "size": 27,
-        "mm": 21.33,
-        "cm": 0,
+        "mm": 20.50,
+        "cm": 2.08,
         "circunference": 67,
         "EUA": 0
     },
     {
         "id": 28,
         "size": 28,
-        "mm": 21.65,
-        "cm": 0,
+        "mm": 20.80,
+        "cm": 2.11,
         "circunference": 68,
         "EUA": 0
     },
     {
         "id": 29,
         "size": 29,
-        "mm": 21.96,
-        "cm": 0,
+        "mm": 21.20,
+        "cm": 2.11,
         "circunference": 69,
         "EUA": 0
     },
     {
         "id": 30,
         "size": 30,
-        "mm": 22.28,
+        "mm": 21.50,
         "cm": 0,
         "circunference": 70,
         "EUA": 0
@@ -250,7 +254,7 @@
     {
         "id": 31,
         "size": 31,
-        "mm": 22.60,
+        "mm": 21.80,
         "cm": 0,
         "circunference": 71,
         "EUA": 0
@@ -258,7 +262,7 @@
     {
         "id": 32,
         "size": 32,
-        "mm": 22.92,
+        "mm": 22.20,
         "cm": 0,
         "circunference": 72,
         "EUA": 0
@@ -266,7 +270,7 @@
     {
         "id": 33,
         "size": 33,
-        "mm": 23.24,
+        "mm": 22.50,
         "cm": 0,
         "circunference": 73,
         "EUA": 0
@@ -274,7 +278,7 @@
     {
         "id": 34,
         "size": 34,
-        "mm": 23.55,
+        "mm": 22.80,
         "cm": 0,
         "circunference": 74,
         "EUA": 0
@@ -282,7 +286,7 @@
     {
         "id": 35,
         "size": 35,
-        "mm": 23.87,
+        "mm": 23.20,
         "cm": 0,
         "circunference": 75,
         "EUA": 0
