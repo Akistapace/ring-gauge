@@ -7,7 +7,7 @@ const remCalc = (px, base = 16) => {
       tempPx = tempPx.replace('px', '')
   
     tempPx = parseInt(tempPx)
-    return (1 / base) * tempPx + 'em'
+    return (1 / base) * tempPx * window.devicePixelRatio + 'em'
 }
 
 const runner = (index)=> {  
@@ -23,8 +23,8 @@ const runner = (index)=> {
     // console.log('VAL', val);
     // console.log('VAL', (0.264583 * val).toFixed(2));
 console.log('SIZE', size);
-    circle.style.width   = size * window.devicePixelRatio ;
-    circle.style.height  = size * window.devicePixelRatio;
+    circle.style.width   = size ;
+    circle.style.height  = size ;
     
     ringSize.textContent = value.size;
     tableSize.textContent = value.size;
