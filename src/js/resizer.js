@@ -23,8 +23,8 @@ const runner = (index)=> {
     // console.log('VAL', val);
     // console.log('VAL', (0.264583 * val).toFixed(2));
 console.log('SIZE', size);
-    circle.style.width   = size ;
-    circle.style.height  = size ;
+    circle.style.width   = size * window.devicePixelRatio ;
+    circle.style.height  = size * window.devicePixelRatio;
     
     ringSize.textContent = value.size;
     tableSize.textContent = value.size;
