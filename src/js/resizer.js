@@ -19,9 +19,6 @@ const runner = (index)=> {
     let tableCirc = document.querySelector('[data-modal-sizer] [data-circ]');
 
     let size = (value.mm * 3.779528).toFixed(2)
-    // console.log('VAL', value.size.toFixed(2));
-    // console.log('VAL', val);
-    // console.log('VAL', (0.264583 * val).toFixed(2));
 
     circle.style.width   = size / 16 + 'em' ;
     circle.style.height  = size / 16 + 'em';
@@ -88,7 +85,8 @@ export const resizer = {
         const _this = this
         if (this.modalContainer()) {
             let canvas = document.createElement('canvas')
-            const size = Math.floor(rings[this.startValue].mm * 3.77) /16 + 'rem';
+            let _size = (rings[this.startValue].mm * 3.779528).toFixed(2)
+            const size = _size /16 + 'em';
             const ctx = canvas.getContext('2d');
             canvas.style.width = size;
             canvas.style.height = size;
