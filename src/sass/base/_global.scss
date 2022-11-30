@@ -130,54 +130,21 @@ img {
 
 #regua {
     position: fixed;
-    left: 5%;
+    left: 0;
     top: 50%;
-    transform: translateY(-50%) rotate(90deg);
+    transform: translateY(-50%);
+    .inner {
+        display: flex;
+        flex-direction: column;
+    }
 }
-
-.cm{
-    height: 30px;		
-    vertical-align: bottom;	
-    display: table-cell;	
+.cm {
+    background-color: #000;
+    width: 10px;
+    height: 1px;
 }
-.cm .inter{	
-    width: 2px;	
-    height: 30px;	
-	background: #000;
-    vertical-align: bottom;	
-}	
-.mm{
-    height: 30px;	
-    vertical-align: bottom;
-    display: table-cell;	
-}
-.mm .inter{	
-    width: 1px;	
-    height: 15px;	
-    background: #333;	
-    vertical-align: bottom;	
-}	
-.cm2{
-    height: 30px;	
-    vertical-align: bottom;
-    display: table-cell;	
-}	
-.cm2 .inter{
-    width: 1px;	
-    height: 20px;	
-    background: #333;
-    vertical-align: bottom;	
-}	
-.cm-letter{	
-    height: 30px;	
-    vertical-align: bottom;	
-    display: table-cell;	
-    text-align: center;	
-    display: none;
-}	
-.cm-letter-inter{	
-    height: 30px;	
-    vertical-align: bottom;	
-    display: table-cell;
-    text-align: left;	
+.mm {
+    background-color: transparent;
+    width: 10px;
+    height: 1mm;
 }

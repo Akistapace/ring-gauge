@@ -113,73 +113,17 @@ export const resizer = {
 
 
 
+// let arr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+// let html = ''
+// let regua = document.querySelector('#regua .inner');
 
-function criarRegua(mm, id){	
-    var html = '';
-    let _id = document.querySelector('#'+id)
-    _id.style.cssText = `
-        height: 60px;
-        display: flex,
-        width:100%;
-    `;
+// arr.forEach((e,index )=> {
+//     index++
+//     let cm = `<div class="cm"></div>`
+//     let div = `<div class="mm"></div>`
+//     html += cm + div
+// });
+// regua.insertAdjacentHTML('afterbegin', html)
 
-    var width = _id.style.width;	
-    var scale = width/mm;	
-    console.log(scale);	
 
-    html += '<div class="inter-number">';
-    html += '<div class="cm-letter-inter"> </div>';
-    for(var i = 5; i< mm; i++){	
-        if(i % 10 == 0){ 
-            html += '<div class="cm-letter">';
-    		if(scale > 2){	
-                html += (i/10);
-            }else{
-                if(i % 20 == 0){
-                    html += (i/10);	
-                }
-    		}			
-            html += '</div>';		
-        }
-    }	
-    html += '<div class="inter-regua">';	
-    for(var i = 0; i< mm; i++){	
-        if(i % 10 == 0){
-            html += '<div class="cm"><div class="inter"></div></div>';
-        }else if(i%5 == 0){	
-            html += '<div class="cm2"><div class="inter"></div></div>';
-        }else{	
-            html += '<div class="mm"><div class="inter"></div></div>';	
-        }	
-    }	
-    html += '</div>';	
-    
-    _id.innerHTML = html;	
-    let _cm = document.querySelector('.cm')
-    let _cm2 = document.querySelector('.cm2')
-    let _mm = document.querySelector('.mm')
-
-    
-    _cm.style.width = (width/mm)+'px'
-    _cm2.style.width = (width/mm)+'px'
-    _mm.style.width = (width/mm)+'px'
-
-    if(scale < 1){		
-        document.querySelectorAll('.cm2 > .inter')
-        .forEach(element => {
-            element.style.background = 'none'    
-        });
-    }	
-    if(scale < 2){
-        document.querySelectorAll('.mm > .inter')
-        .forEach(element => {
-            element.style.background = 'none'    
-        });
-    }
-    document.querySelector('.cm-letter-inter').style.width = (width/mm*5)+'px'
-    document.querySelector('.cm-letter').style.width = (width/mm*10)+'px'
-
-}
-
-criarRegua(300, 'regua');
 
