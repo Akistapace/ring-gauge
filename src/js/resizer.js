@@ -165,10 +165,16 @@ function criarRegua(mm, id){
     _mm.style.width = (width/mm)+'px'
 
     if(scale < 1){		
-        // document.querySelector('.cm2 > .inter').style.background = 'none'
+        document.querySelectorAll('.cm2 > .inter')
+        .forEach(element => {
+            element.style.background = 'none'    
+        });
     }	
     if(scale < 2){
-        // document.querySelector('.mm > .inter').style.background = 'none'
+        document.querySelectorAll('.mm > .inter')
+        .forEach(element => {
+            element.style.background = 'none'    
+        });
     }
     document.querySelector('.cm-letter-inter').style.width = (width/mm*5)+'px'
     document.querySelector('.cm-letter').style.width = (width/mm*10)+'px'
