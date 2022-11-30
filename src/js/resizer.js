@@ -12,17 +12,19 @@ const remCalc = (px, base = 20) => {
 
 const runner = (index)=> {  
     let value = rings[index];
-    let circle = document.querySelector('[data-modal-sizer] .custom');
+    let circle = document.querySelector('[data-modal-sizer] #image');
     let ringSize = document.querySelector('[data-modal-sizer] .ringsize');
     let tableSize = document.querySelector('[data-modal-sizer] [data-size]');
     let tableMm = document.querySelector('[data-modal-sizer] [data-mm]');
     let tableCirc = document.querySelector('[data-modal-sizer] [data-circ]');
 
-    let size = (value.mm * 3.779528).toFixed(2)
+    // let size = (value.mm * 3.779528).toFixed(2)
+    let size = (value.mm * 0.1).toFixed(2)
 
-    circle.style.fontSize = size / 16 +'rem'
-    // circle.style.width   = size * window.devicePixelRatio  +  'px' ;
-    // circle.style.height  = size * window.devicePixelRatio  +  'px';
+    
+    // circle.style.fontSize = size * window.ppcm +'px'
+    circle.style.width   = `${size * window.ppcm}mm` ;
+    circle.style.height  = `${size * window.ppcm}mm` ;
     
     ringSize.textContent = value.size;
     tableSize.textContent = value.size;
@@ -34,7 +36,7 @@ export const resizer = {
     sliderBar: ()=> document.querySelector(`[data-resizer] .slider`),
     setMin: rings[0].size,
     setMax: rings.length - 1,
-    startValue: 23,
+    startValue: 14,
     setDefaultValue() { runner(this.startValue) },
     rangebar() {
         const _this = this
@@ -87,21 +89,20 @@ export const resizer = {
         if (this.modalContainer()) {
             let canvas = document.createElement('canvas')
 
-            // let _size = (rings[this.startValue].mm * 3.779528).toFixed(2)
+            let _size = (rings[this.startValue].mm * 0.1 * window.ppcm).toFixed(2)
+            const size =  _size * window.devicePixelRatio + 'cm';
+            const ctx = canvas.getContext('2d');
+            canvas.style.width = size;
+            canvas.style.height = size;
 
-            // const size =  _size * window.devicePixelRatio + 'px';
-            // const ctx = canvas.getContext('2d');
-            // canvas.style.width = size;
-            // canvas.style.height = size;
-
-            // ctx.fillStyle = "#bada55";
-            // ctx.fillRect(0, 0, 300, 300);
-            const imageElement  = document.querySelector(".custom");
-            imageElement.style.fontSize = rings[this.startValue].mm * 3.779528 / 16 +'rem'
-            // imageElement.width  = rings[this.startValue].mm * 3.77
-            // imageElement.height = rings[this.startValue].mm * 3.77
+            ctx.fillStyle = "#bada55";
+            ctx.fillRect(0, 0, 300, 300);
+            const imageElement  = document.querySelector("#image");
+            // imageElement.style.fontSize = rings[this.startValue].mm * 0.1 * window.ppcm +'px'
+            imageElement.style.width  = `${rings[this.startValue].mm * 0.1  * window.ppcm}mm`
+            imageElement.style.height = `${rings[this.startValue].mm * 0.1 * window.ppcm}mm`
             
-            // imageElement.src = canvas.toDataURL("image/png");
+            imageElement.src = canvas.toDataURL("image/png");
 
             _this.setDefaultValue();
             _this.rangebar();
@@ -110,20 +111,4 @@ export const resizer = {
         }
     }
 }
-
-
-
-// let arr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
-// let html = ''
-// let regua = document.querySelector('#regua .inner');
-
-// arr.forEach((e,index )=> {
-//     index++
-//     let cm = `<div class="cm"></div>`
-//     let div = `<div class="mm"></div>`
-//     html += cm + div
-// });
-// regua.insertAdjacentHTML('afterbegin', html)
-
-
 
