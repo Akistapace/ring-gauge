@@ -23,8 +23,8 @@ const runner = (index)=> {
 
     
     // circle.style.fontSize = size * window.ppcm +'px'
-    circle.style.width   = `${size * window.ppcm}mm` ;
-    circle.style.height  = `${size * window.ppcm}mm` ;
+    circle.style.width   = (size * window.ppcm)  +  'px' ;
+    circle.style.height  = (size * window.ppcm)  +  'px';
     
     ringSize.textContent = value.size;
     tableSize.textContent = value.size;
@@ -36,7 +36,7 @@ export const resizer = {
     sliderBar: ()=> document.querySelector(`[data-resizer] .slider`),
     setMin: rings[0].size,
     setMax: rings.length - 1,
-    startValue: 14,
+    startValue: 23,
     setDefaultValue() { runner(this.startValue) },
     rangebar() {
         const _this = this
@@ -89,8 +89,8 @@ export const resizer = {
         if (this.modalContainer()) {
             let canvas = document.createElement('canvas')
 
-            let _size = (rings[this.startValue].mm * 0.1 * window.ppcm).toFixed(2)
-            const size =  _size * window.devicePixelRatio + 'cm';
+            let _size = ((rings[this.startValue].mm * 0.1 * window.ppcm)).toFixed(2)
+            const size =  _size + 'px';
             const ctx = canvas.getContext('2d');
             canvas.style.width = size;
             canvas.style.height = size;
@@ -99,9 +99,8 @@ export const resizer = {
             ctx.fillRect(0, 0, 300, 300);
             const imageElement  = document.querySelector("#image");
             // imageElement.style.fontSize = rings[this.startValue].mm * 0.1 * window.ppcm +'px'
-            imageElement.style.width  = `${rings[this.startValue].mm * 0.1  * window.ppcm}mm`
-            imageElement.style.height = `${rings[this.startValue].mm * 0.1 * window.ppcm}mm`
-            
+            imageElement.style.width  = (rings[this.startValue].mm * 0.1).toFixed(2) * window.ppcm +  'px'
+            imageElement.style.height = (rings[this.startValue].mm * 0.1).toFixed(2) * window.ppcm +  'px'         
             imageElement.src = canvas.toDataURL("image/png");
 
             _this.setDefaultValue();
