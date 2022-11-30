@@ -12,7 +12,7 @@ const remCalc = (px, base = 20) => {
 
 const runner = (index)=> {  
     let value = rings[index];
-    let circle = document.querySelector('[data-modal-sizer] #image');
+    let circle = document.querySelector('[data-modal-sizer] .custom');
     let ringSize = document.querySelector('[data-modal-sizer] .ringsize');
     let tableSize = document.querySelector('[data-modal-sizer] [data-size]');
     let tableMm = document.querySelector('[data-modal-sizer] [data-mm]');
@@ -20,8 +20,9 @@ const runner = (index)=> {
 
     let size = (value.mm * 3.779528).toFixed(2)
 
-    circle.style.width   = size / 16 + 'em' ;
-    circle.style.height  = size / 16 + 'em';
+    circle.style.fontSize = size / 16 +'rem'
+    // circle.style.width   = size * window.devicePixelRatio  +  'px' ;
+    // circle.style.height  = size * window.devicePixelRatio  +  'px';
     
     ringSize.textContent = value.size;
     tableSize.textContent = value.size;
@@ -33,7 +34,7 @@ export const resizer = {
     sliderBar: ()=> document.querySelector(`[data-resizer] .slider`),
     setMin: rings[0].size,
     setMax: rings.length - 1,
-    startValue: 14,
+    startValue: 23,
     setDefaultValue() { runner(this.startValue) },
     rangebar() {
         const _this = this
@@ -85,18 +86,22 @@ export const resizer = {
         const _this = this
         if (this.modalContainer()) {
             let canvas = document.createElement('canvas')
-            let _size = (rings[this.startValue].mm * 3.779528).toFixed(2)
-            const size = _size /16 + 'em';
-            const ctx = canvas.getContext('2d');
-            canvas.style.width = size;
-            canvas.style.height = size;
-            ctx.fillStyle = "#bada55";
-            ctx.fillRect(0, 0, 300, 300);
-            const imageElement  = document.querySelector("#image");
-            imageElement.width  = rings[this.startValue].mm * 3.77
-            imageElement.height = rings[this.startValue].mm * 3.77
+
+            // let _size = (rings[this.startValue].mm * 3.779528).toFixed(2)
+
+            // const size =  _size * window.devicePixelRatio + 'px';
+            // const ctx = canvas.getContext('2d');
+            // canvas.style.width = size;
+            // canvas.style.height = size;
+
+            // ctx.fillStyle = "#bada55";
+            // ctx.fillRect(0, 0, 300, 300);
+            const imageElement  = document.querySelector(".custom");
+            imageElement.style.fontSize = rings[this.startValue].mm * 3.779528 / 16 +'rem'
+            // imageElement.width  = rings[this.startValue].mm * 3.77
+            // imageElement.height = rings[this.startValue].mm * 3.77
             
-            imageElement.src = canvas.toDataURL("image/png");
+            // imageElement.src = canvas.toDataURL("image/png");
 
             _this.setDefaultValue();
             _this.rangebar();
@@ -105,3 +110,70 @@ export const resizer = {
         }
     }
 }
+
+
+
+
+function criarRegua(mm, id){	
+    var html = '';
+    let _id = document.querySelector('#'+id)
+    _id.style.cssText = `
+        height: 60px;
+        display: flex,
+        width:100%;
+    `;
+
+    var width = _id.style.width;	
+    var scale = width/mm;	
+    console.log(scale);	
+
+    html += '<div class="inter-number">';
+    html += '<div class="cm-letter-inter"> </div>';
+    for(var i = 5; i< mm; i++){	
+        if(i % 10 == 0){ 
+            html += '<div class="cm-letter">';
+    		if(scale > 2){	
+                html += (i/10);
+            }else{
+                if(i % 20 == 0){
+                    html += (i/10);	
+                }
+    		}			
+            html += '</div>';		
+        }
+    }	
+    html += '<div class="inter-regua">';	
+    for(var i = 0; i< mm; i++){	
+        if(i % 10 == 0){
+            html += '<div class="cm"><div class="inter"></div></div>';
+        }else if(i%5 == 0){	
+            html += '<div class="cm2"><div class="inter"></div></div>';
+        }else{	
+            html += '<div class="mm"><div class="inter"></div></div>';	
+        }	
+    }	
+    html += '</div>';	
+    
+    _id.innerHTML = html;	
+    let _cm = document.querySelector('.cm')
+    let _cm2 = document.querySelector('.cm2')
+    let _mm = document.querySelector('.mm')
+
+    
+    _cm.style.width = (width/mm)+'px'
+    _cm2.style.width = (width/mm)+'px'
+    _mm.style.width = (width/mm)+'px'
+
+    if(scale < 1){		
+        // document.querySelector('.cm2 > .inter').style.background = 'none'
+    }	
+    if(scale < 2){
+        // document.querySelector('.mm > .inter').style.background = 'none'
+    }
+    document.querySelector('.cm-letter-inter').style.width = (width/mm*5)+'px'
+    document.querySelector('.cm-letter').style.width = (width/mm*10)+'px'
+
+}
+
+criarRegua(300, 'regua');
+

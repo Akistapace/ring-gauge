@@ -47,5 +47,8 @@
   "bugs": {
     "url": "https://github.com/Akistapace/ring-gauge/issues"
   },
-  "homepage": "https://github.com/Akistapace/ring-gauge#readme"
+  "homepage": "https://github.com/Akistapace/ring-gauge#readme",
+  "dependencies": {
+    "bootstrap-icons": "^1.10.2"
+  }
 }
