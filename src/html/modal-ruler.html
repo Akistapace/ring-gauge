@@ -1,0 +1,25 @@
+<div class="modal --show-ruler" data-modal-ruler>
+    <div class="content">
+        <span class="close">X</span>
+        <div>
+          <canvas style="cursor:e-resize" id="ruler"></canvas>
+          
+          <div class="handle">
+            <button class="btn" data-changeppi="minus">-</button>
+            <input id="ppi" type="text" size="5" value="100.7">
+            <button class="btn" data-changeppi="plus" >+</button>
+          </div>
+          
+          <select id="adjuster" class="initialized"></select>
+          <div id="sPPI" style="display: none;"></div>
+          <div id="btnAdjust" style="display: none;"></div>
+
+        </div>
+       
+        <p class="paragraph --center">
+          Tente deixar o mais alinhado possível.
+        </p>   
+        <button class="button" data-next>PRÓXIMO</button>
+    </div>
+</div>
+

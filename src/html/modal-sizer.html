@@ -1,21 +1,23 @@
 <div class="modal --show-sizes" data-modal-sizer>
     <div class="content">
-        
-       
-
         <span class="close">X</span>
         <div class="ringsize">1</div>
         <div class="wrapper">
-          <!-- <i class="bi bi-plus-circle custom"></i> -->
-          <!-- <canvas></canvas> -->
-          <!-- <span class="circle" data-ring-sizer></span> -->
-          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAACWCAYAAADwkd5lAAAAAXNSR0IArs4c6QAADwFJREFUeF7tnbtrFc0bxycgMYEU5gJiOm38ByzES6OFvRYKXgoLRRRBEC3EOxaCIoiIgpdC/UvUUkHSqIXaREFyARHipcjLrL89v83JSWZ3zszOMzOfwOE12dm5fL7P7neeZ/fwDkxNTS3++fNHDQ8PF5/BwUHFDwQgAAEIQKCbgPaKhYWF4qO9YmB6enpxYmJCzc3NFR/9MzY2VnwwEwIIAhCAQN4EtGn08oeZmZl/BjI5Odkh9PPnz07jkZGRwkhGR0fVwMBA3hRZPQQgAIFMCCwuLqr5+fnCC7QnlEm" id="image" />
+          <span class="circle" data-ring></span>
         </div>
         <p class="paragraph">
-          Para verificar se o tamanho do anel corresponde ao seu tamanho, certifique-se de estar alinhado com o dispositivo e coloque o anel sob a tela de forma que o anel fique alinhado com a borda a ponto de você não enxergar mais a borda. 
+          Certifique-se de estar alinhado com o dispositivo e coloque o sob uma superficie plana. Coloque o anel no centralizando no circulo de forma que o circulo roxo esteja totalmente dentro do anel. 
         </p>    
-        <div class="resizer" data-resizer>
-          <input type="range" class="slider"  id="myRange">
+        <div class="resizer-container" data-resizer>
+          <button type="button" class="minus">
+            <span>-</span>
+          </button>
+          <div class="resizer" >
+            <input type="range" min="0" max="35" class="slider"  id="myRange">
+          </div>
+          <button type="button" class="plus">
+            <span>+</span>
+          </button>
         </div>
         <Table class="small" data-table>
           <thead>
