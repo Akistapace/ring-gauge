@@ -50,6 +50,13 @@
             max-width: 500px;
             min-height: 200px;
         }
+        .paragraph {
+            margin-bottom: 10px;
+            strong {
+                margin-bottom: 0px;
+                margin-top: 0px;
+            }
+        }
         .circle {
             margin-top: 60px;
             margin-bottom: 60px;

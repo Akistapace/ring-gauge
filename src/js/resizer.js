@@ -7,7 +7,7 @@ const runner = (index)=> {
     let tableSize = document.querySelector('[data-modal-sizer] [data-size]');
     let tableMm = document.querySelector('[data-modal-sizer] [data-mm]');
     let tableCirc = document.querySelector('[data-modal-sizer] [data-circ]');
-    let size = (value.mm * 0.1).toFixed(2) * window.ppcm + 'px' 
+    let size = Number((value.mm * 0.1) * window.ppcm + 2).toFixed(2) + 'px' 
 
     circle.style.width  = size ;
     circle.style.height = size;
