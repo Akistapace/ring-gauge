@@ -9,7 +9,7 @@ export const handlePPIRule = {
     BL_inch: 129.5,
     width: '',
     rulers: [ "",
-    "Cartão de Crédito (reto)","Cartão de Crédito (lado)"],
+    "Cartão de Crédito - vertical","Cartão de Crédito - horizontal"],
     rulers_inch: [0,2.18,3.44],
     ruler: ()=> document.getElementById("ruler"),
     ctx: '',
@@ -153,7 +153,7 @@ export const handlePPIRule = {
           _this.ctx.strokeStyle = '#722faa';
           _this.ctx.fillStyle = "#722faa";
           _this.ctx.font = "14px Arial";
-          _this.ctx.lineWidth = 1;
+          _this.ctx.lineWidth = 3;
           _this.ctx.beginPath();
           _this.ctx.moveTo(_this.begin_x,60);
           _this.ctx.lineTo(_this.begin_x,70);
