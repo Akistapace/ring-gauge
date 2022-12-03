@@ -1,4 +1,5 @@
 import rings from "../data/rings.json";
+import { handlePPIRule } from "./ruler";
 
 const runner = (index)=> {  
     let value = rings[index];
@@ -85,6 +86,7 @@ export const resizer = {
             document.querySelector('[data-popup]').classList.remove('--show')
             this.setDefaultValue();
             modalSize.classList.add('--opened')
+            handlePPIRule.save()
         });
     },
     close() {
@@ -134,7 +136,7 @@ export const resizer = {
     init() {
         const _this = this
         if (this.modalSizer()) {      
-            
+
             _this.rangebar();
             _this.close();
             _this.open();

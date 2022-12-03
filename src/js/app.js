@@ -4,15 +4,11 @@ import {header} from "./header";
 import { resizer } from "./resizer";
 import { handlePPIRule } from "./ruler";
 
-// import {camera} from "./camera";
-
 (async ()=> {
-    // listRings.init();
+    const page = document.body.classList
     header.init()
-    resizer.init()
-    handlePPIRule.init();
-    // camera.init()
-    window.addEventListener('DOMContentLoaded', ()=>{
-        // modal.init();
-    })
+    if (page.contains('home')) {
+        resizer.init();
+        handlePPIRule.init();
+    }
 })()

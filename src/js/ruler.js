@@ -25,12 +25,12 @@ export const handlePPIRule = {
     handleMouseOut: (e)=> isDragging = false,
     handleMouseMove(e){
         const _this = this;
-        if((_this.isDragging)&&(document.getElementById("adjuster").value!='')){
-            const MouseX = parseInt(e.clientX-_this.DDX);
-            document.getElementById("ppi").value = parseFloat(_this.DSV) + MouseX / 10;
-            _this.drawruler();
-            _this.drawAdjuster();
-        }
+        // if((_this.isDragging)&&(document.getElementById("adjuster").value!='')){
+        //     const MouseX = parseInt(e.clientX-_this.DDX);
+        //     document.getElementById("ppi").value = parseFloat(_this.DSV) + MouseX / 10;
+        //     _this.drawruler();
+        //     _this.drawAdjuster();
+        // }
     },
     rulerEvents() {
         this.ruler().addEventListener("mousedown", this.handleMouseDown);
@@ -78,9 +78,17 @@ export const handlePPIRule = {
         if ( (typeof(Storage)!=="undefined") ) {
           localStorage.setItem("pixels_per_inch", this.gel('ppi').value);
         } else {
-            this.setCookie('ppi', this.gel('ppi').value, 365);
+            // this.setCookie('ppi', this.gel('ppi').value, 365);
         }
-        this.drawruler();
+        // this.drawruler();
+    },
+    getLocalstorage() {
+        let item = localStorage.getItem("pixels_per_inch");
+        if (item) {
+            return item
+        } else {
+            return 0
+        }
     },
     restore(){
         this.setCookie('ppi', '', -1);
@@ -175,25 +183,30 @@ export const handlePPIRule = {
         const _this = this;
         let ruler =  _this.ruler()
         _this.ctx = ruler.getContext("2d");
-        
         _this.rulerEvents()
-        if (typeof(localStorage)!=="undefined") {
-            if (localStorage.getItem("pixels_per_inch")!==null){
-                _this.gel('ppi').value = localStorage.getItem("pixels_per_inch");
-            }
-        } else if ((_this.getCookie('ppi')!='') && (parseFloat(_this.getCookie('ppi'))>50)){
-            _this.gel('ppi').value = _this.getCookie('ppi');
-        }
 
         _this.ruler().width = 300
         _this.clientWidth = _this.ruler().clientWidth;
         
+        let item = handlePPIRule.getLocalstorage()
+        console.log('ITEM',item);
+        
+        if (item != 0) {
+            document.getElementById("ppi").value = item
+        }
+
+
         _this.drawruler();
-        _this.drawAdjuster(3.45);
+        _this.drawAdjuster();
         _this.refrest_btnAdjust();
         _this.adjuster()
 
-        document.querySelector('[data-changeppi="plus"]').click()
+        if (item != 0) {
+            document.querySelector('[data-changeppi="plus"]').click()
+            document.querySelector('[data-changeppi="minus"]').click()
+        } else {
+            document.querySelector('[data-changeppi="plus"]').click()
+        }
 
         window.ppcm = this.ppcm
     }
