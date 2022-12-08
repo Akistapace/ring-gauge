@@ -1,0 +1,20 @@
+{
+    "redirects": [
+      { "source": "/", "destination": "/index.html" },
+      { "source": "/barbante", "destination": "/barbante.html" },
+      { "source": "/medidor-online", "destination": "/medidor-online.html" },
+      { "source": "/sobre", "destination": "/sobre.html" },
+      { "source": "/regua", "destination": "/regua.html" },
+      { "source": "/contato", "destination": "/contato.html" },
+      { "source": "/404", "destination": "/404.html" },
+      { "source": "/tabela-tamanhos", "destination": "/tabela-tamanhos.html" },
+      { "source": "/tabela", "destination": "/tabela.html" },
+      { "source": "/politica-privacidade", "destination": "/politica-privacidade.html" },
+      {
+        "source": "/(.*)",
+        "status": 404,
+        "destination": "/404.html",
+        "permanent": false
+      }
+    ]
+  }
