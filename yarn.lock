@@ -413,6 +413,14 @@
     "globals" "^13.2.0"
     "nullthrows" "^1.1.1"
 
+"@parcel/packager-raw-url@^2.7.0":
+  "integrity" "sha512-qbMYvYizkAmSlTM69DxAd8yCEfP6FfpeoQ+e258TD8PDlwzfxNghuBbbnT2kULZGeYuzQd8aGyuErJdmbJmC4w=="
+  "resolved" "https://registry.npmjs.org/@parcel/packager-raw-url/-/packager-raw-url-2.7.0.tgz"
+  "version" "2.7.0"
+  dependencies:
+    "@parcel/plugin" "2.7.0"
+    "@parcel/utils" "2.7.0"
+
 "@parcel/packager-raw@2.7.0":
   "integrity" "sha512-jg2Zp8dI5VpIQlaeahXDCfrPN9m/DKht1NkR9P2CylMAwqCcc1Xc1RRiF0wfwcPZpPMpq1265n+4qnB7rjGBlA=="
   "resolved" "https://registry.npmjs.org/@parcel/packager-raw/-/packager-raw-2.7.0.tgz"
@@ -663,6 +671,16 @@
     "consolidate" "^0.16.0"
     "nullthrows" "^1.1.1"
     "semver" "^5.7.1"
+
+"@parcel/transformer-webmanifest@^2.7.0":
+  "integrity" "sha512-QPLxLGdi2e9KBPhAi+Hpo00kvEhytZoxE56E9+jTgVKwZynn+7YoGhqoNz73MtqHSnrZ+IKojveU81w7Nl00cw=="
+  "resolved" "https://registry.npmjs.org/@parcel/transformer-webmanifest/-/transformer-webmanifest-2.7.0.tgz"
+  "version" "2.7.0"
+  dependencies:
+    "@mischnic/json-sourcemap" "^0.1.0"
+    "@parcel/diagnostic" "2.7.0"
+    "@parcel/plugin" "2.7.0"
+    "@parcel/utils" "2.7.0"
 
 "@parcel/types@2.7.0":
   "integrity" "sha512-+dhXVUnseTCpJvBTGMp0V6X13z6O/A/+CUtwEpMGZ8XSmZ4Gk44GvaTiBOp0bJpWG4fvCKp+UmC8PYbrDiiziw=="
