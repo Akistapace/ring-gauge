@@ -11,7 +11,8 @@
     "src/pages/regua.html",
     "src/pages/tabela-tamanhos.html",
     "src/pages/tabela.html",
-    "src/pages/404.html"
+    "src/pages/404.html",
+    "src/pages/thanks.html"
   ],
   "alias": {
     "global": "@"
