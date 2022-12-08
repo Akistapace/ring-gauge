@@ -592,6 +592,15 @@
     "@parcel/plugin" "2.7.0"
     "json5" "^2.2.0"
 
+"@parcel/transformer-jsonld@^2.7.0":
+  "integrity" "sha512-/vulifMgVNG8wpTKUbbXULImU2lprTvROjMNIy30Dy7aEYDnlBYarpfo1EH4o8t+WUWvZZoOBtKhJLBQah9ddQ=="
+  "resolved" "https://registry.npmjs.org/@parcel/transformer-jsonld/-/transformer-jsonld-2.7.0.tgz"
+  "version" "2.7.0"
+  dependencies:
+    "@parcel/plugin" "2.7.0"
+    "@parcel/types" "2.7.0"
+    "json5" "^2.2.0"
+
 "@parcel/transformer-postcss@2.7.0":
   "integrity" "sha512-b6RskXBWf0MjpC9qjR2dQ1ZdRnlOiKYseG5CEovWCqM218RtdydFKz7jS+5Gxkb6qBtOG7zGPONXdPe+gTILcA=="
   "resolved" "https://registry.npmjs.org/@parcel/transformer-postcss/-/transformer-postcss-2.7.0.tgz"
