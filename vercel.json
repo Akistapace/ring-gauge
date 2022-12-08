@@ -12,7 +12,8 @@
       { "source": "/politica-privacidade", "destination": "/politica-privacidade.html" },
       {
         "source": "/(.*)",
-        "destination": "https://www.medidordeanel.com.br/404",
+        "status": 404,
+        "destination": "/404.html",
         "permanent": false
       }
     ]
