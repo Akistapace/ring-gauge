@@ -438,6 +438,16 @@
     "@parcel/utils" "2.7.0"
     "posthtml" "^0.16.4"
 
+"@parcel/packager-xml@^2.7.0":
+  "integrity" "sha512-V/JgF4WkCbizuG7KLb9GDwmfg86ecWT4n7VGPJnVe7JjLj0ULmcMayTjZBa1d0te+58VBwUBCsxro5pX0ga4PQ=="
+  "resolved" "https://registry.npmjs.org/@parcel/packager-xml/-/packager-xml-2.7.0.tgz"
+  "version" "2.7.0"
+  dependencies:
+    "@parcel/plugin" "2.7.0"
+    "@parcel/types" "2.7.0"
+    "@parcel/utils" "2.7.0"
+    "@xmldom/xmldom" "^0.7.5"
+
 "@parcel/plugin@^2.0.0-beta.1", "@parcel/plugin@2.7.0":
   "integrity" "sha512-qqgx+nnMn6/0lRc4lKbLGmhNtBiT93S2gFNB4Eb4Pfz/SxVYoW+fmml+KdfOSiZffWOAH5L6NwhyD7N8aSikzw=="
   "resolved" "https://registry.npmjs.org/@parcel/plugin/-/plugin-2.7.0.tgz"
@@ -691,6 +701,14 @@
     "@parcel/plugin" "2.7.0"
     "@parcel/utils" "2.7.0"
 
+"@parcel/transformer-xml@^2.7.0":
+  "integrity" "sha512-OFtEiPhPET5oXNelwY7fEYI/Hfs8QQKlileut/pqNqP6I6LNZFFuEox6CKm1gY/fxyfK1pef9YHdKtsEdhxFFA=="
+  "resolved" "https://registry.npmjs.org/@parcel/transformer-xml/-/transformer-xml-2.7.0.tgz"
+  "version" "2.7.0"
+  dependencies:
+    "@parcel/plugin" "2.7.0"
+    "@xmldom/xmldom" "^0.7.5"
+
 "@parcel/types@2.7.0":
   "integrity" "sha512-+dhXVUnseTCpJvBTGMp0V6X13z6O/A/+CUtwEpMGZ8XSmZ4Gk44GvaTiBOp0bJpWG4fvCKp+UmC8PYbrDiiziw=="
   "resolved" "https://registry.npmjs.org/@parcel/types/-/types-2.7.0.tgz"
@@ -811,6 +829,11 @@
   "integrity" "sha512-W9mfWLHmJhkfAmV+7gDjcHeAWALQtgGT3JErxULl0oz6R6+3ug91I7IErs93eCFhPCZPHBs4QJS7YWEV7A3sxw=="
   "resolved" "https://registry.npmjs.org/@vue/shared/-/shared-3.2.41.tgz"
   "version" "3.2.41"
+
+"@xmldom/xmldom@^0.7.5":
+  "integrity" "sha512-yceMpm/xd4W2a85iqZyO09gTnHvXF6pyiWjD2jcOJs7hRoZtNNOO1eJlhHj1ixA+xip2hOyGn+LgcvLCMo5zXA=="
+  "resolved" "https://registry.npmjs.org/@xmldom/xmldom/-/xmldom-0.7.9.tgz"
+  "version" "0.7.9"
 
 "abortcontroller-polyfill@^1.1.9":
   "integrity" "sha512-JMJ5soJWP18htbbxJjG7bG6yuI6pRhgJ0scHHTfkUjf6wjP912xZWvM+A4sJK3gqd9E8fcPbDnOefbA9Th/FIQ=="

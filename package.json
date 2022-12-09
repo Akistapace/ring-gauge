@@ -11,7 +11,8 @@
     "src/pages/regua.html",
     "src/pages/tabela.html",
     "src/pages/404.html",
-    "src/pages/thanks.html"
+    "src/pages/thanks.html",
+    "src/pages/sitemap.xml"
   ],
   "alias": {
     "global": "@"
@@ -27,11 +28,13 @@
   },
   "devDependencies": {
     "@parcel/packager-raw-url": "^2.7.0",
+    "@parcel/packager-xml": "^2.7.0",
     "@parcel/transformer-jsonld": "^2.7.0",
     "@parcel/transformer-posthtml": "^2.7.0",
     "@parcel/transformer-sass": "^2.7.0",
     "@parcel/transformer-vue": "^2.7.0",
     "@parcel/transformer-webmanifest": "^2.7.0",
+    "@parcel/transformer-xml": "^2.7.0",
     "parcel": "^2.7.0",
     "parcel-plugin-static-files-copy": "^2.6.0",
     "parcel-reporter-static-files-copy": "^1.4.0",
