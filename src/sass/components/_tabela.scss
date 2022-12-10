@@ -1,0 +1,9 @@
+.section-tabela {
+    #tabela {
+        display: flex;
+        justify-content: space-around;
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+}

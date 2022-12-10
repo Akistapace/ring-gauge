@@ -13,4 +13,28 @@
     @media (max-width: 768px) {
         flex-direction: column;
     }
+    .wrapper {
+        display: flex;
+        .inner {
+            width: 60%;
+            padding-right: 40px;
+        }
+        .right {
+            width: 40%;
+        }
+        @media (max-width: 768px) {
+            flex-direction: column;
+            .right,
+            .inner {
+                width: 100%;
+                padding: 0;
+            }
+        }
+    }
+    legend {
+        color: $primary;
+    }
+    ul {
+        margin-bottom: 25px
+    }
 }
