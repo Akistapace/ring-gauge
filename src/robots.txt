@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: 
+Sitemap: https://medidordeanel.com.br/sitemap.xml

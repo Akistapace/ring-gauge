@@ -14,17 +14,12 @@
     "src/pages/thanks.html",
     "src/pages/sitemap.xml"
   ],
-  "alias": {
-    "global": "@"
-  },
   "staticFiles": {
-    "staticPath": [
-      "./src/assets/"
-    ]
+    "staticPath": ["./src/assets/", "./src/robots.txt"]
   },
   "scripts": {
     "start": "parcel",
-    "build": "parcel build"
+    "build": "parcel build && cp ./src/robots.txt ./dist"
   },
   "devDependencies": {
     "@parcel/packager-raw-url": "^2.7.0",

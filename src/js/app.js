@@ -9,7 +9,7 @@ import { tabela } from "./tabela";
     const page = document.body.classList
     header.init();
 
-    if (page.contains('barbante') || page.contains('regua')) {
+    if (page.contains('barbante') || page.contains('regua') || page.contains('tabela')) {
         tabela.init();
     }
 

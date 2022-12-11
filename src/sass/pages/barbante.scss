@@ -3,6 +3,11 @@
         text-decoration: underline;
         color: $primary;
     }
+    ul {
+        li {
+            margin-bottom: 10px;
+        }
+    }
     img {
         max-width: 500px;
         width: 100%;
