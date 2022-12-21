@@ -12,6 +12,22 @@
         justify-content: center;
         padding: 70px 20 ;
         
+        .title {
+            font-weight: normal !important;
+            font-size: 50px;
+            line-height: 141.5%;
+            text-align: center;
+            color: #000;
+            text-transform: capitalize;
+            strong {
+                font-weight: 700;
+                color: $primary;
+            }
+            @media (max-width: 768px ) {
+                font-size: 30;
+            } 
+        }
+        
     }
     .paragraph strong {
         margin-top: 20px;
@@ -30,22 +46,13 @@
         height: 52px;
         border-radius: 15px;
     }
-
-    .title {
-        font-weight: normal !important;
-        font-size: 50px;
-        line-height: 141.5%;
-        text-align: center;
-        color: #000;
-        text-transform: capitalize;
-        strong {
-            font-weight: 700;
-            color: $primary;
+    .section2 {
+        padding: 100px 0;
+        .title {
+            text-transform: capitalize;
         }
-        @media (max-width: 768px ) {
-            font-size: 30;
-        } 
-            
-    
+        .inner {
+            padding: 0 5%;
+        }
     }
 }

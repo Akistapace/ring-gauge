@@ -2,11 +2,12 @@
     display: flex;
     flex-shrink: 0;
     width: 100%;
-    padding: 0 20px;
-    background-image: $gradient1;
-    color: $white;
-    padding: 40px 5%;
+    flex-direction: column;
+    // background-image: $gradient1;
+    background-color: $tertiary;
     .wrapper {
+        padding: 100px 5%;
+        color: $white;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
@@ -15,8 +16,8 @@
         margin: 0 auto;
         @media (max-width: 768px) {
             flex-direction: column;
-        align-items: center;
-        text-align: center;
+            align-items: center;
+            text-align: center;
         }
     }
     .list {
@@ -60,5 +61,12 @@
         @media (max-width: 768px) {
             justify-content: center;
         }
+    }
+    .copy {
+        padding: 15px 5%;
+        text-align: center;
+        background-color:  $quaternary;
+        background-image: $gradient1;
+        color: $white;
     }
 }

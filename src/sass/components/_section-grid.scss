@@ -1,5 +1,4 @@
 .container-grid {
-    padding: 5%;
     .grid:nth-child(even) {
         flex-direction: row-reverse;
         .bigcircle {
@@ -15,6 +14,7 @@
 .grid {
     display: flex;
     margin-bottom: 45px;
+    padding: 5%;
     @media (max-width: 996px) {
         flex-direction: column !important;
     }
@@ -56,6 +56,7 @@
             width: 270px;
             height: 270px;
             font-size: 24px;
+            margin-bottom: 20px;
         }      
     }
     .description {
