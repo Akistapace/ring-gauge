@@ -3,12 +3,13 @@ import { handlePPIRule } from "./ruler";
 
 const runner = (index)=> {  
     let value = rings[index];
+    console.log('value',value);
     let circle = document.querySelector('[data-modal-sizer] [data-ring]');
     let ringSize = document.querySelector('[data-modal-sizer] .ringsize');
     let tableSize = document.querySelector('[data-modal-sizer] [data-size]');
     let tableMm = document.querySelector('[data-modal-sizer] [data-mm]');
-    let tableCirc = document.querySelector('[data-modal-sizer] [data-circ]');
-    let size = Number((value.mm * 0.1) * window.ppcm + 2).toFixed(2) + 'px' 
+    let tableCm = document.querySelector('[data-modal-sizer] [data-circ]');
+    let size = Number((value.mm * 0.1) * window.ppcm + 3).toFixed(2) + 'px' 
 
     circle.style.width  = size ;
     circle.style.height = size;
@@ -16,19 +17,19 @@ const runner = (index)=> {
     ringSize.textContent = value.size;
     tableSize.textContent = value.size;
     tableMm.textContent = value.mm;
-    tableCirc.textContent = value.circunference;
+    tableCm.textContent = value.cm;
 }
 
 export const resizer = {
     sliderBar: ()=> document.querySelector(`[data-resizer] .slider`),
-    setMin: rings[0].size,
+    setMin: 0,
     setMax: rings.length - 1,
     startValue: 14,
     setDefaultValue() { runner(this.startValue) },
     rangebar() {
         const _this = this
         const slider = _this.sliderBar()
-        slider.value=this.startValue
+        slider.value = this.startValue
         slider.oninput = function() {
             slider.max = _this.setMax;
             slider.min = _this.setMin;
@@ -40,14 +41,16 @@ export const resizer = {
         let plus = document.querySelector('[data-resizer] .plus')
         plus.addEventListener('click', ()=> {
             let input = document.querySelector('[data-resizer] input')
-            input.stepUp()
+            input.stepUp();
             runner(input.value);
+            // console.log(input.value);
         })
         minus.addEventListener('click', ()=> {
             let input = document.querySelector('[data-resizer] input')
             if (input.value > 0) {
-                input.stepDown()
+                input.stepDown();
                 runner(input.value);
+                // console.log(input.value);
             }
         })
 

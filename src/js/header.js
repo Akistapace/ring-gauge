@@ -8,11 +8,14 @@ export const header = {
             const menu = document.querySelector('[data-menu]')
             if (!menu.classList.contains('--opened-menu')) {
               const currentScroll = window.pageYOffset;
+              
+              header.classList.add('--scrolled');
               if (currentScroll <= 0) {
                 header.classList.remove('--scroll-up');
+                header.classList.remove('--scrolled');
                 return;
               }
-            
+              
               if (currentScroll > lastScroll && !header.classList.contains('--scroll-down')) {
                 // down
                 header.classList.remove('--scroll-up');

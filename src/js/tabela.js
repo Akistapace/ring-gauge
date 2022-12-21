@@ -18,7 +18,7 @@ export const tabela = {
                         <tr>
                             <th>Tamanho</th>
                             <th>Milímetro</th>
-                            <th>Circunferrência</th>
+                            <th>Centímetros</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -26,8 +26,8 @@ export const tabela = {
                             return `
                                 <tr>
                                     <td>${e.size}</td>
-                                    <td>${e.mm}</td>
-                                    <td>${e.circunference}</td>
+                                    <td>${e.mm}mm</td>
+                                    <td>${e.cm}cm</td>
                                 </tr>
                             `
                             }).toString().replace(/,/g, '')
@@ -44,7 +44,7 @@ export const tabela = {
                         <tr>
                             <th>Tamanho</th>
                             <th>Milímetro</th>
-                            <th>Circunferrência</th>
+                            <th>Centímetros</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -53,7 +53,7 @@ export const tabela = {
                                 <tr>
                                     <td>${e.size}</td>
                                     <td>${e.mm}</td>
-                                    <td>${e.circunference}</td>
+                                    <td>${e.cm}</td>
                                 </tr>
                             `
                             }).toString().replace(/,/g, '')

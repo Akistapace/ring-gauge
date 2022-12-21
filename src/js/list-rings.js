@@ -27,7 +27,7 @@ const listRings = {
                         <tr>
                         <th>Tamanho</th>
                         <th>Milímetros</th>
-                        ${ring.circunference ? `<th>Circ.</th>` : ''}
+                        ${ring.cm ? `<th>Centímetros</th>` : ''}
                         </tr>
                     </thead>
 
@@ -35,7 +35,7 @@ const listRings = {
                         <tr>
                         <td>${ring.size}</td>
                         <td>${ring.mm}</td>
-                        ${ring.circunference ? `<td>${ring.circunference}</td>`:''}
+                        ${ring.cm ? `<td>${ring.cm}</td>`:''}
                         </tr>
                     </tbody>
                 </Table>
