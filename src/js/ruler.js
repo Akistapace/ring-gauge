@@ -21,23 +21,7 @@ export const handlePPIRule = {
             this.DSV = document.getElementById("ppi").value;
         }
     },
-    handleMouseUp:  (e)=> isDragging = false,
-    handleMouseOut: (e)=> isDragging = false,
-    handleMouseMove(e){
-        const _this = this;
-        // if((_this.isDragging)&&(document.getElementById("adjuster").value!='')){
-        //     const MouseX = parseInt(e.clientX-_this.DDX);
-        //     document.getElementById("ppi").value = parseFloat(_this.DSV) + MouseX / 10;
-        //     _this.drawruler();
-        //     _this.drawAdjuster();
-        // }
-    },
-    rulerEvents() {
-        this.ruler().addEventListener("mousedown", this.handleMouseDown);
-        this.ruler().addEventListener("mouseup", this.handleMouseUp);
-        this.ruler().addEventListener("mouseout", this.handleMouseOut);
-        this.ruler().addEventListener("mousemove", this.handleMouseMove);
-    },
+
     gel: (id)=> document.getElementById(id),
     setCookie(c_name,value,exdays){
         var exdate = new Date();
@@ -62,10 +46,12 @@ export const handlePPIRule = {
     },
     drawruler(){ 
         const _this = this;
-        if ((_this.gel("ppi").value != '') && (parseFloat(_this.gel("ppi").value) > 50)){
-            _this.dpi_x = parseFloat( _this.gel("ppi").value );
+        let ppi = _this.gel("ppi")
+
+        if ((ppi.value != '') && (parseFloat(ppi.value) > 50)){
+            _this.dpi_x = parseFloat( ppi.value );
         } else {
-            _this.gel("ppi").value == _this.dpi_x;
+            ppi.value == _this.dpi_x;
         }
         if ((_this.dpi_x < 50) || (isNaN( _this.dpi_x ))) {
             _this.dpi_x = 100.7;
@@ -130,8 +116,8 @@ export const handlePPIRule = {
     changeppi(f){
         var ppi = document.getElementById('ppi');
         ppi.value = parseFloat(ppi.value)+f;
-        this.drawruler();
         this.drawAdjuster();
+        this.drawruler();
         // console.log('PPI', ppi.value = parseFloat(ppi.value)+f);
         // console.log('dpi_x', this.dpi_x);
         window.ppcm = this.ppcm
@@ -161,14 +147,18 @@ export const handlePPIRule = {
           _this.ctx.strokeStyle = '#722faa';
           _this.ctx.fillStyle = "#722faa";
           _this.ctx.font = "14px Arial";
-          _this.ctx.lineWidth = 3;
+          _this.ctx.lineWidth = 5;
           _this.ctx.beginPath();
-          _this.ctx.moveTo(_this.begin_x,60);
-          _this.ctx.lineTo(_this.begin_x,70);
+          
+          //left Bar
+          _this.ctx.moveTo(_this.begin_x,30);
+          _this.ctx.lineTo(_this.begin_x,100);
           _this.ctx.moveTo(_this.begin_x,65);
+
+          //Right Bar
           _this.ctx.lineTo(_this.begin_x+w,65);
-          _this.ctx.moveTo(_this.begin_x+w,60);
-          _this.ctx.lineTo(_this.begin_x+w,70);
+          _this.ctx.moveTo(_this.begin_x+w,30);
+          _this.ctx.lineTo(_this.begin_x+w,100);
           _this.ctx.stroke();
       
           var txt = _this.rulers[adjuster.value];
@@ -183,9 +173,9 @@ export const handlePPIRule = {
         const _this = this;
         let ruler =  _this.ruler()
         _this.ctx = ruler.getContext("2d");
-        _this.rulerEvents()
 
         _this.ruler().width = 300
+        _this.ruler().height = 100
         _this.clientWidth = _this.ruler().clientWidth;
         
         let item = handlePPIRule.getLocalstorage()

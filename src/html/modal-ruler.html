@@ -1,29 +1,31 @@
-<div class="modal --show-ruler" data-modal-ruler>
+<div class="--show-ruler" data-modal-ruler>
     <div class="content">
-        <span class="close">X</span>
-        <div>
-          <canvas style="cursor:e-resize" id="ruler"></canvas>
-          
-          <div class="handle">
-            <small>Calibragem</small>
-            <button class="btn" data-changeppi="minus">-</button>
-            <input id="ppi" type="text" size="5" value="100.7" >
-            <button class="btn" data-changeppi="plus" >+</button>
-          </div>
-          
-          <select id="adjuster" class="initialized"></select>
-          <div id="sPPI" style="display: none;"></div>
-          <div id="btnAdjust" style="display: none;"></div>
-
+      <p class="paragraph --center">
+        É necessário calibrar o seu dispositivo. Para isto é necessário a utilização de um objeto de tamanho universal como por exemplo um cartão.
+      </p>   
+      <p class="paragraph --center">
+        Tente deixar o mais alinhado possível mantendo as laterais bem justas ao cartão.
+      </p>   
+        
+      <div>
+        <div class="canvas">
+          <canvas id="ruler"></canvas>
+          <!-- <span class="resize">resizer</span> -->
         </div>
+        
+        <div class="handle">
+          <small>Calibragem</small>
+          <button class="btn" data-changeppi="minus">-</button>
+          <input id="ppi" type="text" size="5" value="100.7" >
+          <button class="btn" data-changeppi="plus" >+</button>
+        </div>
+        
+        <select id="adjuster" class="initialized"></select>
+        <div id="sPPI" style="display: none;"></div>
+        <div id="btnAdjust" style="display: none;"></div>
+      </div>
        
-        <p class="paragraph --center">
-          É necessário calibrar o seu dispositivo. Para isto é necessário a utilização de um objeto de tamanho universal como por exemplo um cartão.
-        </p>   
-        <p class="paragraph --center">
-          Tente deixar o mais alinhado possível mantendo as laterais bem justas ao cartão.
-        </p>   
-        <button class="button" data-next>PRÓXIMO</button>
+      <button class="button" data-next>PRÓXIMO</button>
     </div>
 </div>
 

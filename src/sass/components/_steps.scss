@@ -1,0 +1,49 @@
+.steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: fit-content;
+    margin: 70px auto 70px auto;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 100%;
+        height: 5px;
+        background-color: $primary;
+        z-index: 1;
+    }
+    .step {
+        background-color: #fff;
+        color: $primary;
+        border: 3px solid $primary;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 20px;
+        z-index: 2;
+        position: relative
+    }
+    .item:not(:last-child) {
+        margin-right: 35px;
+    }
+    .step.active {
+        background-image: $gradient1;
+        color: #ffffff;
+    }
+}
+
+
+.canvas {
+    position: relative;
+    .resize {
+        position: absolute;
+    }
+}

@@ -13,8 +13,9 @@ import { tabela } from "./tabela";
         tabela.init();
     }
 
-    if (page.contains('home')) {
-        resizer.init();
-        handlePPIRule.init();
+    if (page.contains('medidor-online')) {
+            console.log('aqui');
+            handlePPIRule.init();
+            resizer.init();
     }
 })()

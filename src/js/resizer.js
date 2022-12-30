@@ -3,12 +3,11 @@ import { handlePPIRule } from "./ruler";
 
 const runner = (index)=> {  
     let value = rings[index];
-    console.log('value',value);
-    let circle = document.querySelector('[data-modal-sizer] [data-ring]');
-    let ringSize = document.querySelector('[data-modal-sizer] .ringsize');
-    let tableSize = document.querySelector('[data-modal-sizer] [data-size]');
-    let tableMm = document.querySelector('[data-modal-sizer] [data-mm]');
-    let tableCm = document.querySelector('[data-modal-sizer] [data-circ]');
+    let circle = document.querySelector('[data-check-sizer] [data-ring]');
+    let ringSize = document.querySelector('[data-check-sizer] .ringsize');
+    let tableSize = document.querySelector('[data-check-sizer] [data-size]');
+    let tableMm = document.querySelector('[data-check-sizer] [data-mm]');
+    let tableCm = document.querySelector('[data-check-sizer] [data-circ]');
     let size = Number((value.mm * 0.1) * window.ppcm + 3).toFixed(2) + 'px' 
 
     circle.style.width  = size ;
@@ -50,100 +49,57 @@ export const resizer = {
             if (input.value > 0) {
                 input.stepDown();
                 runner(input.value);
-                // console.log(input.value);
             }
-        })
-
-    },
-    modalSizer: ()=> document.querySelector('[data-modal-sizer]'),
-    modalRuler: ()=> document.querySelector('[data-modal-ruler]'),
-    open() {
-        let modalRuler = this.modalRuler()
-        let modalSize  = this.modalSizer()
-        let button = document.querySelector('[data-open-resizer]') 
-        let buttonNext = document.querySelector('[data-next]') 
-
-        button.addEventListener('click', ()=> {
-            modalRuler.classList.add('--opened')
-            document.body.classList.add('--no-scroll')
         });
-
+    },
+    nextStep() {
+        let buttonNext = document.querySelector('[data-next]')
+        
         buttonNext.addEventListener('click', ()=> {
-            modalRuler.classList.remove('--opened') 
-            document.body.classList.add('--no-scroll')
-            document.querySelector('[data-popup]').classList.add('--show')
-            
-            this.popupAlert(modalSize);
+            document.querySelector('[data-first-step]').classList.remove('active')
+            document.querySelector('[data-second-step]').classList.add('active')
         })
     },
     popupAlert(modalSize) {
-        let getPopup = document.querySelector('[data-popup]')
-        let decline = getPopup.querySelector('[data-decline]')
-        let accept = getPopup.querySelector('[data-accept]')
+        let decline = document.querySelector('[data-decline]')
+        let accept = document.querySelector('[data-accept]')
 
-        decline.addEventListener('click', ()=> {
-            document.querySelector('[data-popup]').classList.remove('--show')
+        decline.addEventListener('click', ()=> {            
+            document.querySelector('.step1').classList.remove('active')
+            document.querySelector('.step2').classList.add('active')
+
+            
+            document.querySelector('[data-second-step]').classList.remove('active')
+            document.querySelector('[data-first-step]').classList.add('active')
             
         });
         accept.addEventListener('click', ()=> {
-            document.querySelector('[data-popup]').classList.remove('--show')
             this.setDefaultValue();
-            modalSize.classList.add('--opened')
+            document.querySelector('[data-second-step]').classList.remove('active')
+            document.querySelector('[data-last-step]').classList.add('active')
             handlePPIRule.save()
+
+            document.querySelector('.step1').classList.remove('active')
+            document.querySelector('.step2').classList.add('active')
         });
     },
-    close() {
-        let modalRuler = this.modalRuler();
-        let modalSize  = this.modalSizer();
+    recalibrate() {
+        let buttonRecalibrate = document.querySelector('#recalibrate')
+        buttonRecalibrate.addEventListener('click', ()=> {
+            document.querySelector('[data-last-step]').classList.remove('active')
+            document.querySelector('[data-first-step]').classList.add('active')
 
-        modalSize.querySelector('.close')
-        .addEventListener('click', ()=> {
-            modalSize.classList.remove('--opened')
-            document.body.classList.remove('--no-scroll')
-        });
-
-        modalRuler.querySelector('.close')
-        .addEventListener('click', ()=> {
-            modalRuler.classList.remove('--opened')
-            document.body.classList.remove('--no-scroll')
-        });
-
-        modalSize.addEventListener('click', (e)=> {
-            e.stopPropagation();
-            if (e.target.classList.contains('modal')) {
-                modalSize.classList.remove('--opened')
-                document.body.classList.remove('--no-scroll')
-            }
-        });
-
-        modalRuler.addEventListener('click', (e)=> {
-            e.stopPropagation();
-            if (e.target.classList.contains('modal')) {
-                modalRuler.classList.remove('--opened')
-                document.body.classList.remove('--no-scroll')
-            }
-        });
-
-        window.addEventListener('keyup', (e)=> {
-            e.stopPropagation();
-            if( modalRuler.classList.contains('--opened') && e.key === "Escape") {
-                modalRuler.classList.remove('--opened')
-                document.body.classList.remove('--no-scroll')
-            }
-            if( modalSize.classList.contains('--opened') && e.key === "Escape") {
-                modalSize.classList.remove('--opened')
-                document.body.classList.remove('--no-scroll')
-            }
+            
+            document.querySelector('.step1').classList.add('active')
+            document.querySelector('.step2').classList.remove('active')
         })
     },
     init() {
         const _this = this
-        if (this.modalSizer()) {      
-
-            _this.rangebar();
-            _this.close();
-            _this.open();
-        }
+        _this.rangebar();
+        _this.nextStep();
+        _this.popupAlert();
+        _this.recalibrate()
     }
 }
 

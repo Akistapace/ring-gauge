@@ -31,6 +31,9 @@
     border: none;
     height: 52px;
     border-radius: 15px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
 }
 .description,
 .paragraph {
