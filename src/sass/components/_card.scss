@@ -45,14 +45,14 @@
     display: flex;
     border-radius: 50%;
     justify-content: center;
-    font-size: 25px;
+    font-size: 28px;
     align-items: center;
     // outline: 2px outset $gold;
     margin: 0 auto 20px auto;
     background-color: $primary50;
     position: relative;
     // display: block;
-    color: #fff;
+    color: purple;
     font-weight: 700;
     &:after {
         content: "";
