@@ -4,7 +4,7 @@ import { handlePPIRule } from "./ruler";
 const runner = (index)=> {  
     let value = rings[index];
     let circle = document.querySelector('[data-check-sizer] [data-ring]');
-    let ringSize = document.querySelector('[data-check-sizer] .ringsize');
+    let ringSize = document.querySelector('[data-check-sizer] [data-ring]');
     let tableSize = document.querySelector('[data-check-sizer] [data-size]');
     let tableMm = document.querySelector('[data-check-sizer] [data-mm]');
     let tableCm = document.querySelector('[data-check-sizer] [data-circ]');
@@ -53,53 +53,84 @@ export const resizer = {
         });
     },
     nextStep() {
-        let buttonNext = document.querySelector('[data-next]')
+        const _this = this;
+        let buttonNext = document.querySelector('[data-next]');
         
         buttonNext.addEventListener('click', ()=> {
-            document.querySelector('[data-first-step]').classList.remove('active')
-            document.querySelector('[data-second-step]').classList.add('active')
+            document.querySelector('[data-first-step]').classList.remove('active');
+            document.querySelector('[data-second-step]').classList.add('active');
+
+            _this.backToTop();
         })
     },
-    popupAlert(modalSize) {
-        let decline = document.querySelector('[data-decline]')
-        let accept = document.querySelector('[data-accept]')
+    popupAlert() {
+        const _this = this;
+        let decline = document.querySelector('[data-decline]');
+        let accept = document.querySelector('[data-accept]');
 
         decline.addEventListener('click', ()=> {            
-            document.querySelector('.step1').classList.remove('active')
-            document.querySelector('.step2').classList.add('active')
+            document.querySelector('.step1').classList.remove('active');
+            document.querySelector('.step2').classList.add('active');
 
+            document.querySelector('[data-second-step]').classList.remove('active');
+            document.querySelector('[data-first-step]').classList.add('active');
             
-            document.querySelector('[data-second-step]').classList.remove('active')
-            document.querySelector('[data-first-step]').classList.add('active')
+            _this.backToTop();
             
         });
         accept.addEventListener('click', ()=> {
             this.setDefaultValue();
-            document.querySelector('[data-second-step]').classList.remove('active')
-            document.querySelector('[data-last-step]').classList.add('active')
-            handlePPIRule.save()
+            document.querySelector('[data-second-step]').classList.remove('active');
+            document.querySelector('[data-last-step]').classList.add('active');
+            handlePPIRule.save();
 
-            document.querySelector('.step1').classList.remove('active')
-            document.querySelector('.step2').classList.add('active')
+            document.querySelector('.step1').classList.remove('active');
+            document.querySelector('.step2').classList.add('active');
+
+            _this.backToTop(document.querySelector('.content'));
+
+            document.body.classList.add('--no-scroll');
+
+            let modal = document.querySelector('[data-alert-modal]');
+            modal.classList.add('--opened');
+            // document.querySelector('').classList.add('active');
+
         });
     },
     recalibrate() {
+        const _this = this;
         let buttonRecalibrate = document.querySelector('#recalibrate')
         buttonRecalibrate.addEventListener('click', ()=> {
-            document.querySelector('[data-last-step]').classList.remove('active')
-            document.querySelector('[data-first-step]').classList.add('active')
+            document.querySelector('[data-last-step]').classList.remove('active');
+            document.querySelector('[data-first-step]').classList.add('active');
 
+            document.querySelector('.step1').classList.add('active');
+            document.querySelector('.step2').classList.remove('active');
             
-            document.querySelector('.step1').classList.add('active')
-            document.querySelector('.step2').classList.remove('active')
+            _this.backToTop();
+            document.body.classList.remove('--no-scroll');
         })
     },
+    backToTop(e) {
+       let el = e || document.body
+       el.scrollIntoView({block: "start", behavior: "smooth"});
+    },
+    confirmAlertModal() {
+        const _this = this;
+        let modal = document.querySelector('[data-alert-modal]');
+        let modalButton = document.querySelector('[data-alert-modal] .button');
+
+        modalButton.addEventListener('click', ()=> {
+            modal.classList.remove('--opened');
+        });
+    },
     init() {
-        const _this = this
+        const _this = this;
         _this.rangebar();
         _this.nextStep();
         _this.popupAlert();
-        _this.recalibrate()
+        _this.recalibrate();
+        _this.confirmAlertModal();
     }
 }
 

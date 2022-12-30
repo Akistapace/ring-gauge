@@ -167,7 +167,6 @@
         }
     }
 }
-
 .resizer-container {
     width: 100%;
     display: flex;
@@ -192,7 +191,7 @@
         background-color: $quaternary;
         font-size: 18px;
         color: #fff;
-        margin-top: 10px;
+        margin-top: 10px !important;
         margin-left: 10px;
         margin-right: 10px;
         span {
@@ -204,7 +203,6 @@
         }
     }
 }
-
 .popup {
     display: none;
     align-items: center;
@@ -221,7 +219,6 @@
     }
 
 }
-
 .confirm-section {
     width: 100%;
     padding: 0 5%;
@@ -263,9 +260,6 @@
         margin-top: 25px;
     }
 }
-
-
-
 .ruler-container {
     canvas {
         margin: 30px auto;
@@ -319,7 +313,6 @@
         margin: 10px auto;
     }
 }
-
 .--show-ring {
     text-align: center;
     .content {
@@ -336,6 +329,7 @@
     .content {
         max-width: 500px;
         min-height: 200px;
+        position: relative;
     }
     .paragraph {
         margin-bottom: 10px;
@@ -351,6 +345,8 @@
     .ringsize {
         top: 20px;
         left: 20px;
+        position: absolute;
+
     }
     .wrapper {
         min-height: 100px;
@@ -427,7 +423,6 @@
         margin: 10px auto;
     }
 }
-
 .tab-content {
     display: none;
     min-height: 430px;
@@ -439,7 +434,6 @@
     }
 
 }
-
 [data-check-sizer] {
     .content {
         margin: auto;
