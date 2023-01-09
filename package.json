@@ -12,6 +12,8 @@
     "src/pages/tabela.html",
     "src/pages/404.html",
     "src/pages/thanks.html",
+    "src/pages/aneleira.html",
+    "src/pages/bastao-medidor.html",
     "src/pages/sitemap.xml"
   ],
   "staticFiles": {

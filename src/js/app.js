@@ -4,6 +4,7 @@ import { header } from "./header";
 import { resizer } from "./resizer";
 import { handlePPIRule } from "./ruler";
 import { tabela } from "./tabela";
+import { Tabs } from "./tabs";
 
 (async ()=> {
     const page = document.body.classList
@@ -17,5 +18,9 @@ import { tabela } from "./tabela";
             console.log('aqui');
             handlePPIRule.init();
             resizer.init();
+    }
+
+    if (page.contains('faqs')) {
+        Tabs.init();
     }
 })()
