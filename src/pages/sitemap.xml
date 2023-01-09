@@ -1,48 +1,65 @@
-<?xml version="2.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  <url>
-    <loc>https://medidordeanel.com.br/</loc>
-    <lastmod>2022-12-11T01:19:51+00:00</lastmod>
-    <priority>1.00</priority>
-  </url>
-  <url>
-    <loc>https://medidordeanel.com.br/sobre</loc>
-    <lastmod>2022-12-11T01:19:51+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://medidordeanel.com.br/politica-privacidade</loc>
-    <lastmod>2022-12-11T01:19:51+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://medidordeanel.com.br/contato</loc>
-    <lastmod>2022-12-11T01:19:51+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://medidordeanel.com.br/medidor-online</loc>
-    <lastmod>2022-12-11T01:19:51+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://medidordeanel.com.br/barbante</loc>
-    <lastmod>2022-12-11T01:19:51+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://medidordeanel.com.br/regua</loc>
-    <lastmod>2022-12-11T01:19:51+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://medidordeanel.com.br/tabela</loc>
-    <lastmod>2022-12-11T01:19:51+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://medidordeanel.com.br/thanks</loc>
-    <lastmod>2022-12-11T01:19:51+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>https://medidordeanel.com.br/</loc>
+  <lastmod>2023-01-09T12:34:21+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://medidordeanel.com.br/sobre</loc>
+  <lastmod>2023-01-09T12:34:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://medidordeanel.com.br/politica-privacidade</loc>
+  <lastmod>2023-01-09T12:34:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://medidordeanel.com.br/contato</loc>
+  <lastmod>2023-01-09T12:34:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://medidordeanel.com.br/faqs</loc>
+  <lastmod>2023-01-09T12:34:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://medidordeanel.com.br/medidor-online</loc>
+  <lastmod>2023-01-09T12:34:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://medidordeanel.com.br/barbante</loc>
+  <lastmod>2023-01-09T12:34:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://medidordeanel.com.br/regua</loc>
+  <lastmod>2023-01-09T12:34:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://medidordeanel.com.br/tabela</loc>
+  <lastmod>2023-01-09T12:34:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://medidordeanel.com.br/aneleira</loc>
+  <lastmod>2023-01-09T12:34:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://medidordeanel.com.br/bastao-medidor</loc>
+  <lastmod>2023-01-09T12:34:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
 </urlset>
