@@ -8,11 +8,12 @@ const runner = (index)=> {
     let tableSize = document.querySelector('[data-check-sizer] [data-size]');
     let tableMm = document.querySelector('[data-check-sizer] [data-mm]');
     let tableCm = document.querySelector('[data-check-sizer] [data-circ]');
+    // Convert the  mm to cm  (mm*0.1) and multiply by the pixels per centmeter
+    // add 3 pixels for rounding
     let size = Number((value.mm * 0.1) * window.ppcm + 3).toFixed(2) + 'px' 
 
     circle.style.width  = size ;
-    circle.style.height = size;
-    
+    circle.style.height = size;    
     ringSize.textContent = value.size;
     tableSize.textContent = value.size;
     tableMm.textContent = value.mm;
@@ -35,17 +36,17 @@ export const resizer = {
             runner(this.value);
         }
 
+        let minus = document.querySelector('[data-resizer] .minus');
+        let plus = document.querySelector('[data-resizer] .plus');
 
-        let minus = document.querySelector('[data-resizer] .minus')
-        let plus = document.querySelector('[data-resizer] .plus')
         plus.addEventListener('click', ()=> {
-            let input = document.querySelector('[data-resizer] input')
+            let input = document.querySelector('[data-resizer] input');
             input.stepUp();
             runner(input.value);
-            // console.log(input.value);
-        })
+        });
+
         minus.addEventListener('click', ()=> {
-            let input = document.querySelector('[data-resizer] input')
+            let input = document.querySelector('[data-resizer] input');
             if (input.value > 0) {
                 input.stepDown();
                 runner(input.value);
@@ -126,6 +127,10 @@ export const resizer = {
     },
     init() {
         const _this = this;
+        
+        document.body.classList.add('--no-scroll');
+        document.querySelector('header').style.display = 'none';
+        document.querySelector('main').style.marginTop = '0';
         _this.rangebar();
         _this.nextStep();
         _this.popupAlert();
