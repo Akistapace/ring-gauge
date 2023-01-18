@@ -109,7 +109,9 @@ export const resizer = {
             document.querySelector('.step2').classList.remove('active');
             
             _this.backToTop();
-            document.body.classList.remove('--no-scroll');
+            document.body.classList.remove('--no-scroll');            
+            document.querySelector('[data-modal-ruler] .inner').style.display = 'block';
+            document.querySelector('[data-modal-ruler] .resizehandle').style.display = 'none';
         })
     },
     backToTop(e) {
@@ -125,12 +127,20 @@ export const resizer = {
             modal.classList.remove('--opened');
         });
     },
+    hideContent(){  
+        const _this = this;
+        let button = document.querySelector('[data-modal-ruler] .inner button')
+        button.addEventListener('click', ()=> {
+            _this.backToTop();
+            document.body.classList.add('--no-scroll');
+            document.querySelector('[data-modal-ruler] .inner').style.display = 'none';
+            document.querySelector('[data-modal-ruler] .resizehandle').style.display = 'block';
+        })
+    },
     init() {
         const _this = this;
         
-        document.body.classList.add('--no-scroll');
-        document.querySelector('header').style.display = 'none';
-        document.querySelector('main').style.marginTop = '0';
+        _this.hideContent();
         _this.rangebar();
         _this.nextStep();
         _this.popupAlert();

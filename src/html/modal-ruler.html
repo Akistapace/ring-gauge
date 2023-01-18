@@ -1,13 +1,21 @@
 <div class="--show-ruler" data-modal-ruler>
     <div class="content">
-      <p class="paragraph --center">
-        É necessário calibrar o seu dispositivo. Para isto é necessário a utilização de um objeto de tamanho universal como por exemplo um cartão.
-      </p>   
-      <p class="paragraph --center">
-        Tente deixar o mais alinhado possível mantendo as laterais bem justas ao cartão.
-      </p>   
-        
-      <div>
+      <div class="inner">
+        <p class="paragraph --center">
+          É necessário calibrar o seu dispositivo. Para isto é necessário a utilização de um objeto de tamanho universal como por exemplo um cartão.
+        </p>         
+        <p class="paragraph --center">
+          <strong>
+            Não se preocupe, não utilizamos seus dados em momento algum.
+          </strong>
+        </p>   
+        <p class="paragraph --center">
+          Tente deixar o mais alinhado possível mantendo as laterais bem justas ao cartão.
+        </p>   
+         <button class="button" type="button">Avançar</button> 
+      </div>
+
+      <div class="resizehandle">
         <div class="canvas">
           <canvas id="ruler"></canvas>
           <!-- <span class="resize">resizer</span> -->
@@ -23,9 +31,9 @@
         <select id="adjuster" class="initialized"></select>
         <div id="sPPI" style="display: none;"></div>
         <div id="btnAdjust" style="display: none;"></div>
+        <button class="button" data-next>PRÓXIMO</button>
       </div>
        
-      <button class="button" data-next>PRÓXIMO</button>
     </div>
 </div>
 

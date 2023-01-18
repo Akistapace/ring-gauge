@@ -1,3 +1,9 @@
 .home.medidor-online button {
     margin-top: 25px;
 }
+.medidor-online main {
+    min-height: 100vh;
+    .resizehandle {
+        display: none;
+    }
+}
