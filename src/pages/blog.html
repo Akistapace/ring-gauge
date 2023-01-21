@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <include src="./src/html/meta-tags.html">
       {
-        "title": "Página não encontrada",
+        "title": "Blog",
         "description": "O medidor de anel é uma ferramenta online e gratuita, prontinha para você usar. Seu principal objetivo é lhe ajudar a descobrir o tamanho de seu anel"
       }
     </include>
@@ -13,17 +13,27 @@
     
     <!-- <include src="./src/html/adsense-script.html" ></include> -->
   </head>
-  <body class="404">
+  <body class="blog">
     
     <include src="./src/html/tags-top-body.html" ></include>
 
     <include src="./src/html/header.html" ></include>
     <main>
-      <section class="container">
-        <h1 class='title --center'>404</h1>
-        <p class="paragraph --center">
-          página não encontrada
-        </p>  
+      <section class="hero">
+        <h1>
+          Blog
+        </h1>
+      </section>
+      <section class="container">       
+        <div class="grid">                    
+          <include src="./src/html/post.html">
+            {
+              "name: "dasdas",
+              "description": "dasfafggad",
+              "link": "./blog.html"
+            }
+          </include>         
+        </div>
       </section>
       <section class="--center --bg">
         <include src="./src/html/footer-text.html"></include>
