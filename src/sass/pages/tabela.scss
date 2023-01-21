@@ -14,4 +14,16 @@
         display: flex;
         margin-top: 80px;
     }
+    ul {
+        @extend .paragraph;
+    }
+    @media (max-width:768px) {
+        .wrapper,
+        .file-download {
+            flex-direction: column;
+        }
+        img {
+            margin: auto;
+        }
+    }
 }
