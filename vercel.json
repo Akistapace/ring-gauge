@@ -1,3 +1,15 @@
 {
-  "cleanUrls": true     
+  "cleanUrls": true ,
+  "rewrites": [
+    { "source": "/about", "destination": "/blog/aneis-de-diferentes-culturas.html" },
+    { "source": "/about", "destination": "/blog/aneis-personalizados.html" },
+    { "source": "/about", "destination": "/blog/aneis-vintages-e-antigos.html" },
+    { "source": "/about", "destination": "/blog/como-cuidar-dos-aneis.html" },
+    { "source": "/about", "destination": "/blog/como-escolher-anel.html" },
+    { "source": "/about", "destination": "/blog/como-usar-aneis.html" },
+    { "source": "/about", "destination": "/blog/historia-dos-aneis.html" },
+    { "source": "/about", "destination": "/blog/significado-dos-aneis-no-dedo.html" },
+    { "source": "/about", "destination": "/blog/significado-dos-aneis.html" },
+    { "source": "/about", "destination": "/blog/tendencias-de-aneis.html" }
+  ]  
 }

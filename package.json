@@ -12,7 +12,21 @@
     "src/pages/tabela.html",
     "src/pages/404.html",
     "src/pages/thanks.html",
-    "src/pages/sitemap.xml"
+    "src/pages/sitemap.xml",
+    "src/pages/aneleira.html",
+    "src/pages/bastao-medidor.html",
+    "src/pages/sitemap.xml",
+    "src/pages/blog.html",
+    "src/pages/aneis-de-diferentes-culturas.html",
+    "src/pages/aneis-personalizados.html",
+    "src/pages/aneis-vintages-e-antigos.html",
+    "src/pages/como-cuidar-dos-aneis.html",
+    "src/pages/como-escolher-anel.html",
+    "src/pages/como-usar-aneis.html",
+    "src/pages/historia-dos-aneis.html",
+    "src/pages/significado-dos-aneis-no-dedo.html",
+    "src/pages/significado-dos-aneis.html",
+    "src/pages/tendencias-de-aneis.html"
   ],
   "staticFiles": {
     "staticPath": ["./src/assets/", "./src/robots.txt"]
