@@ -25,7 +25,12 @@
     "src/pages/historia-dos-aneis.html",
     "src/pages/significado-dos-aneis-no-dedo.html",
     "src/pages/significado-dos-aneis.html",
-    "src/pages/tendencias-de-aneis.html"
+    "src/pages/tendencias-de-aneis.html",
+    "src/pages/aneis-de-compromisso.html",
+    "src/pages/aneis-de-noivado-tendencias-para-2023.html",
+    "src/pages/diamantes-vs-pedras-preciosas.html",
+    "src/pages/como-usar-diversos-aneis.html",
+    "src/pages/aneis-masculinos.html"
   ],
   "staticFiles": {
     "staticPath": ["./src/assets/", "./src/robots.txt"]
