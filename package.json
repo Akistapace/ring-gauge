@@ -33,11 +33,11 @@
     "src/pages/aneis-masculinos.html"
   ],
   "staticFiles": {
-    "staticPath": ["./src/assets/", "./src/robots.txt"]
+    "staticPath": ["./src/assets/", "./src/robots.txt", "./src/ads.txt"]
   },
   "scripts": {
     "start": "parcel",
-    "build": "parcel build && cp ./src/robots.txt ./dist"
+    "build": "parcel build && cp ./src/robots.txt ./dist && cp ./src/ads.txt ./dist"
   },
   "devDependencies": {
     "@parcel/packager-raw-url": "^2.7.0",
