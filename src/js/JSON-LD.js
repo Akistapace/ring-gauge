@@ -2,7 +2,7 @@ const createElement = (data)=> {
     let script = document.createElement('script');
     script.setAttribute('type', 'application/ld+json');
     script.textContent = JSON.stringify(data);
-    document.head.appendChild(script);
+    document.body.appendChild(script);
 }
 
 export const Archive = {

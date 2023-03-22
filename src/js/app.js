@@ -10,7 +10,6 @@ import { Archive } from "./JSON-LD";
 (async ()=> {
     const page = document.body.classList;
     header.init();
-    
     Archive.init();
     if (page.contains('blog-post')) {
     }
