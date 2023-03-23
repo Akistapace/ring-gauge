@@ -11,8 +11,7 @@ import { Archive } from "./JSON-LD";
     const page = document.body.classList;
     header.init();
     Archive.init();
-    if (page.contains('blog-post')) {
-    }
+    if (page.contains('blog-post')) {}
 
     if (page.contains('barbante') || page.contains('regua') || page.contains('tabela')) {
         tabela.init();
