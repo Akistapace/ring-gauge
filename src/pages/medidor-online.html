@@ -16,40 +16,45 @@
     <include src="./src/html/header.html" ></include>
     <include src="./src/html/tags-top-body.html" ></include>
     <main>
-      <include src="./src/html/adsterra-fullbanner.html" ></include>
-      <section class="container">
-        <include src="./src/html/adsense-horizontal1.html"></include>
-       
-        <!-- <button data-open-resizer class="button">MEDIR</button> -->
-        <div class="steps">
-          <div class="item">
-            <span class="step active step1">
-              1
-            </span>
+      <div class="wrappering">
+        
+        <include src="./src/html/adsterra-fullbanner.html" ></include>
+        <section class="container">
+          <include src="./src/html/adsense-horizontal1.html"></include>
+         
+          <!-- <button data-open-resizer class="button">MEDIR</button> -->
+          <div class="steps">
+            <div class="item">
+              <span class="step active step1">
+                1
+              </span>
+            </div>
+            <div class="item">
+              <span class="step step2">
+                2
+              </span>
+            </div>
+            <!-- <span class="item step3">3</span> -->
           </div>
-          <div class="item">
-            <span class="step step2">
-              2
-            </span>
+  
+          <div class="tab-content active" data-first-step>
+            <include src="./src/html/modal-ruler.html" ></include>
           </div>
-          <!-- <span class="item step3">3</span> -->
-        </div>
-
-        <div class="tab-content active" data-first-step>
-          <include src="./src/html/modal-ruler.html" ></include>
-        </div>
+          
+          <div class="tab-content" data-second-step>
+            <include src="./src/html/modal-alert.html" ></include>
+          </div>
+          
+          <div class="tab-content" data-last-step>
+            <include src="./src/html/modal-sizer.html" ></include>
+            <button type="button" id="recalibrate" class="button">recalibrar</button>
+          </div>
+          
+          
+        </section>
         
-        <div class="tab-content" data-second-step>
-          <include src="./src/html/modal-alert.html" ></include>
-        </div>
-        
-        <div class="tab-content" data-last-step>
-          <include src="./src/html/modal-sizer.html" ></include>
-          <button type="button" id="recalibrate" class="button">recalibrar</button>
-        </div>
-        
-        
-      </section>
+        <include src="./src/html/adsterra-column.html"></include>
+      </div>
       <include src="./src/html/methods.html"></include>
       
     </main>
