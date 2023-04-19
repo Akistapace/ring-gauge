@@ -3,9 +3,8 @@
         .wrappering {
             display: grid;
             grid-template-areas: 
-            'full side' 
-            'content side' 
-            'content side';
+            'full'  
+            'content';
         }
         .items-300 {
            min-width: 300px;
@@ -23,6 +22,10 @@
             .items-300 {
                 display: none;
             }
+            
+            .column-container {
+                display: none;
+            }
         }
         @media (max-width: 768px) {
             .items-160 {
@@ -31,6 +34,9 @@
             .wrappering {
                 display: flex;
                 flex-direction: column;
+            }
+            .column-container {
+                display: block;
             }
         }
     </style>
@@ -56,7 +62,7 @@
             document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.profitabledisplaynetwork.com/e1748fb21534b690731ef2ba982ad8c7/invoke.js"></scr' + 'ipt>');
         </script>
     </div>
-    <div class="items-160">
+    <!-- <div class="items-160">
         <script type="text/javascript">
             atOptions = {
                 'key' : '80af14e755cff99f9f0913e8d99dc044',
@@ -77,5 +83,5 @@
             };
             document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.profitabledisplaynetwork.com/427e64a4bfed1e4cb22ce03c68f534c3/invoke.js"></scr' + 'ipt>');
         </script>
-    </div>
+    </div> -->
 </div>
