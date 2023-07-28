@@ -1,68 +1,68 @@
-@import '../components/list-cards';
+@import "../components/list-cards";
 
 .home {
-    main {
-        padding-top: 0;
+  main {
+    padding-top: 0;
+  }
+  .hero {
+    min-height: 60vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+    padding: 70px 20;
+    padding: 0 5%;
+    .title {
+      font-size: 38px;
+      line-height: 141.5%;
+      @media (max-width: 768px) {
+        margin-top: 60px;
+        font-size: 24px;
+      }
     }
-    .hero {
-        min-height: 60vh;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        // justify-content: center;
-        padding: 70px 20;
-        padding: 0 5%;
-        .title {
-            font-size: 38px;
-            line-height: 141.5%;
-            @media (max-width: 768px ) {
-                margin-top: 60px;
-                font-size: 24px;
-            } 
-        }
-        .subtitle {
-            font-size: 16px;
-            line-height: 30px;
-        }
-        .subtitle,
-        .title {
-            text-align: center;
-            color: #000;
-            text-transform: capitalize;
-            font-weight: normal !important;
-            strong {
-                display: inline-block;
-                font-weight: 700;
-                color: $primary;
-            }
-        }
-        
+    .subtitle {
+      font-size: 16px;
+      line-height: 30px;
     }
-    .paragraph strong {
-        margin-top: 20px;
-        margin-bottom: 20px;
-        display: block;
+    .subtitle,
+    .title {
+      text-align: center;
+      color: #000;
+      text-transform: capitalize;
+      font-weight: normal !important;
+      strong {
+        display: inline-block;
+        font-weight: 700;
+        color: $primary;
+      }
     }
-    .button {
-        margin: 70px auto;
-        display: block;
-        // height: 60px;
-        // max-width: 300px;
-        width: 100%;
-        font-size: 18px;
-        font-weight: normal;
-        max-width: 173px;
-        height: 52px;
-        border-radius: 15px;
+  }
+  .paragraph strong {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+  }
+  .button {
+    margin: 70px auto;
+    display: block;
+    // height: 60px;
+    // max-width: 300px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: normal;
+    max-width: 173px;
+    height: 52px;
+    border-radius: 15px;
+  }
+  .section2 {
+    padding: 100px 0;
+    .title {
+      text-transform: capitalize;
     }
-    .section2 {
-        padding: 100px 0;
-        .title {
-            text-transform: capitalize;
-        }
-        .inner {
-            padding: 0 5%;
-        }
+    .inner {
+      @extend %container;
+      padding: 0 5%;
     }
+  }
 }

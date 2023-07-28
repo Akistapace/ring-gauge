@@ -1,51 +1,24 @@
-@import
-'./base/theme',
-'./base/global'
-;
+@import "./base/theme", "./base/global", "./base/placeholder";
 
-
-@import 
-'./helpers/typos',
-'./helpers/commons'
-;
+@import "./helpers/typos", "./helpers/commons";
 
 // ====================================================== //
 // ===================== COMPONENTES ==================== //
 // ====================================================== //
-@import 
-'./components/header',
-'./components/search-bar',
-'./components/card',
-'./components/methods',
-'./components/modal',
-'./components/footer-text',
-'./components/footer',
-'./components/file-download',
-'./components/resizer',
-'./components/section-grid',
-'./components/tabela',
-'./components/steps'
-;
+@import "./components/header", "./components/search-bar", "./components/card",
+  "./components/methods", "./components/modal", "./components/footer-text",
+  "./components/footer", "./components/file-download", "./components/resizer",
+  "./components/section-grid", "./components/tabela", "./components/steps";
 
 // ====================================================== //
 // ======================== PAGES ======================= //
 // ====================================================== //
-@import 
-'./pages/home',
-'./pages/contact',
-'./pages/regua',
-'./pages/tabela',
-'./pages/medidor',
-'./pages/barbante',
-'./pages/faqs',
-'./pages/aneleira',
-'./pages/bastao',
-'./pages/default',
-'./pages/blog-post.scss',
-'./pages/blog.scss'
-;
+@import "./pages/home", "./pages/contact", "./pages/regua", "./pages/tabela",
+  "./pages/medidor", "./pages/barbante", "./pages/faqs", "./pages/aneleira",
+  "./pages/bastao", "./pages/default", "./pages/blog-post.scss",
+  "./pages/blog.scss";
 
 iframe {
-    margin: 20px auto;
-    display: block;
+  margin: 20px auto;
+  display: block;
 }
