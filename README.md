@@ -1,34 +1,23 @@
-This is a vanilla web app built with [Parcel](https://parceljs.org).
+# 📏 Ring Gauge – Medidor de Anel
 
-## Getting Started
+Ring Gauge é um aplicativo simples e intuitivo que permite medir o tamanho de anéis diretamente na tela do seu dispositivo. Ideal para quem deseja descobrir ou confirmar o tamanho de um anel utilizando um modelo físico como referência.
 
-Run the dev server:
+- 🛠️ Funcionalidades
+- 📐 Medição precisa do diâmetro interno de anéis.
+- 🖥️ Interface responsiva e fácil de usar.
+- 🔍 Suporte a diferentes padrões de tamanhos de anéis.
+- 📷 Possibilidade de calibrar a escala com objetos de tamanho conhecido (como um cartão de crédito).
 
-```bash
-yarn start
-# or
-npm start
-```
+## 🚀 Como Usar
+- Acesse o aplicativo no seu navegador ou dispositivo compatível: [Medidor de Anel Online](https://ring-gauge.vercel.app/)
+- Coloque um anel sobre a área designada na tela.
+- Ajuste a escala utilizando um objeto de tamanho conhecido para garantir a precisão.
+- Leia o tamanho correspondente exibido na tela.
 
-And open [localhost:1234](http://localhost:1234) in your browser!
 
-As you make changes, you should see your app automatically update in the browser without even refreshing the page!
-
-## Learn More
-
-- [Getting started guide](https://parceljs.org/getting-started/webapp/)
-- [Documentation](https://parceljs.org/docs/)
-
-## Deploy Your Own
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/vercel/tree/main/examples/parcel&template=parcel)
-
-_Live Example: https://parcel-template.vercel.app_
-
-### Deploying From Your Terminal
-
-You can deploy your new Parcel project with a single command from your terminal using [Vercel CLI](https://vercel.com/download):
-
-```shell
-$ vercel
-```
+## 🧪 Tecnologias Utilizadas
+O aplicativo é baseado em HTML, SASS e JavaScript puro, sem dependências externas.
+- Parcel
+- JavaScript
+- HTML5
+- SASS
